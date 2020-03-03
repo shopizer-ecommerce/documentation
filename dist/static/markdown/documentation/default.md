@@ -14,5 +14,5 @@
 ## Languages
 
 - Languages files
-- New translation
+- [Create new language](/#/software/translation)
 

@@ -38,11 +38,11 @@ Enabling 3 apis
    - Geocoding API
    - Places API
 
-![Google APIs diagram](/static/img/documentation/google-api.png "Enable Google APIs")
+![Google APIs diagram](/documentation/static/img/documentation/google-api.png "Enable Google APIs")
 
 Then once apis are enabled keep keys aside to configure Shopizer
 
-![Google keys diagram](/static/img/documentation/keys.png "Keep keys aside")
+![Google keys diagram](/documentation/static/img/documentation/keys.png "Keep keys aside")
 
 
 - **Google Places API**
@@ -169,6 +169,7 @@ Have AWS user access key and secret access key handy
 
 This video is a tutorial on the configuration of S3 and CloudFront to work as content management underlying CMS for Shopizer. (**Comming soon**)
 
+```json
 Bucket Policy
 {
     "Version": "2012-10-17",
@@ -186,4 +187,5 @@ Bucket Policy
         }
     ]
 }
+```
 

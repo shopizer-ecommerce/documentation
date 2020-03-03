@@ -168,7 +168,7 @@
           "description": "Translate to other lamguages",
           "iconContext": "fas",
           "icon": "language",
-          "markdown": "/static/markdown/translation/default.md"
+          "markdown": "/static/markdown/software/translation.md"
         },
         {
           "route": "/rules",
@@ -222,26 +222,7 @@
 			"description": "anything about process",
 			"iconContext": "fas",
 			"icon": "project-diagram",
-			"topics": ["process"],
-			"children": [{
-					"route": "/introduction",
-					"name": "Process Introduction",
-					"description": "how to read the process documentation",
-					"iconContext": "fas",
-					"icon": "project-diagram",
-					"topics": ["process"],
-					"markdown": "/static/markdown/notavailable.md"
-				},
-				{
-					"route": "/newPagesHowto",
-					"name": "New Pages HowTo",
-					"description": "how to create new Pages for the application",
-					"iconContext": "fas",
-					"icon": "file-alt",
-					"topics": ["process"],
-					"markdown": "/static/markdown/notavailable.md"
-				}
-			]
+			"topics": ["database"]
 		},
 		{
 			"route": "/rest",
@@ -324,6 +305,30 @@
 				}
 			]
 		},
+		{
+			"route": "/metrics",
+			"name": "Shopizer metrics",
+			"description": "Shopizer generated data and metrics",
+			"iconContext": "fas",
+			"icon": "address-book",
+			"children": [{
+					"route": "/analytics",
+					"name": "Configure analytics",
+					"description": "",
+					"iconContext": "fas",
+					"icon": "desktop",
+					"markdown": "/static/markdown/notavailable.md"
+				},
+				{
+					"route": "/discover",
+					"name": "Discover Shopizer e-commerce data",
+					"description": "",
+					"iconContext": "fas",
+					"icon": "file-alt",
+					"markdown": "/static/markdown/notavailable.md"
+				}
+			]
+		},		
 		{
 			"route": "/deployment",
 			"name": "Deploying Shopizer",

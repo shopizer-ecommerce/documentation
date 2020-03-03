@@ -36,10 +36,10 @@
         for (var file of chunk.files) {
           if (file.match(/\.(js|css)$/)) { %>
     <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
-    <script>
-      if (location.protocol == 'http:' && location.hostname !== 'localhost') {
-        location.href = location.href.replace(/^http:/, 'https:')
-      }
+<script>
+if (location.protocol == 'http:' && location.hostname !== 'localhost') {
+    location.href = location.href.replace(/^http:/, 'https:')
+}
 
 var req = new XMLHttpRequest();
 req.overrideMimeType("application/json");
@@ -50,9 +50,9 @@ req.onload  = function() {
    console.log(version);
    document.getElementById('ghBranchVersion').innerHTML=version;
 };
-req.send(null);
+req.send();
 
-    </script>
+</script>
   </head>
   <body>
     <noscript>
