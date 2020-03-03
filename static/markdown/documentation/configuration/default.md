@@ -169,6 +169,7 @@ Have AWS user access key and secret access key handy
 
 This video is a tutorial on the configuration of S3 and CloudFront to work as content management underlying CMS for Shopizer. (**Comming soon**)
 
+```json
 Bucket Policy
 {
     "Version": "2012-10-17",
@@ -186,4 +187,5 @@ Bucket Policy
         }
     ]
 }
+```
 
