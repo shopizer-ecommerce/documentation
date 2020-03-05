@@ -2,7 +2,7 @@
 
 
 - [Required configurations](/#/documentation/configuration)
-- Database configuration
+- [Database configuration](/#/documentation/database)
 - Search configuration
 
 
