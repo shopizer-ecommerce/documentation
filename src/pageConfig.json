@@ -103,10 +103,10 @@
         {
 					"route": "/database",
 					"name": "Database configuration",
-					"description": "EXPLAIN",
+					"description": "Configure Shopizer database",
 					"iconContext": "fas",
 					"icon": "database",
-					"markdown": "/static/markdown/notavailable.md"
+					"markdown": "/static/markdown/documentation/database/default.md"
 				},
 				{
 					"route": "/search",
