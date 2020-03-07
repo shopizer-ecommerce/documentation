@@ -43,7 +43,7 @@ A REST api exposes all commerce functionality (B2C, B2B, C2C, Multi-Stores) as w
 ## Shopizer components
 
 
-![Shopizer components](/static/img/documentation/shopizer-components.jpg "Shopizer components")
+![Shopizer components](/documentation/static/img/documentation/shopizer-components.jpg "Shopizer components")
 
 The Component Model describes the entire hierarchy of components in terms of their responsibilities, their interfaces, their (static) relationships, and the way they collaborate to deliver required functionality.
 

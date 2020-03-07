@@ -167,7 +167,10 @@ Requirements:
 Have an AWS account
 Have AWS user access key and secret access key handy
 
-This video is a tutorial on the configuration of S3 and CloudFront to work as content management underlying CMS for Shopizer. (**Comming soon**)
+This video is a tutorial on the configuration of S3 and CloudFront to work as content management underlying CMS for Shopizer.
+
+[![AWS S3 Bucket](https://img.youtube.com/vi/ETqWBj0Cw30/0.jpg)](https://www.youtube.com/watch?v=ETqWBj0Cw30 "Configure S3 bucket and CloudFront as underlying content management")
+
 
 ```json
 Bucket Policy
@@ -189,3 +192,6 @@ Bucket Policy
 }
 ```
 
+####Google Cloud Platform Buckets and Cloud CDN for serving images
+
+**Available soon**

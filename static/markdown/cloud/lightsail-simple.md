@@ -99,7 +99,7 @@ Copy those following lines in open for edit window
 server {
         listen 80;
         listen [::]:80;
-        server_name carlsamson.ca;
+        server_name yourwebsite.ca;
         access_log /var/log/nginx/reverse-access.log;
         error_log /var/log/nginx/reverse-error.log;
 
@@ -111,7 +111,9 @@ server {
 }
 ```
 
-exit from nano and save (Ctrl X)
+Change server_name to your target domain name
+
+Exit from nano and save (Ctrl X)
 
 Copy the configuration from /etc/nginx/sites-available to /etc/nginx/sites-enabled. It is recommended to use a symbolic link.
 
@@ -135,7 +137,7 @@ sudo systemctl restart nginx
 
 ### Install Certbot on your instance
 
-Certbot installation commands from apt package manager
+Certbot installation commands from apt package manager. **This is only possible** if selected LightSail OS is Ubuntu.
 
 ```sh
 sudo apt-get update
