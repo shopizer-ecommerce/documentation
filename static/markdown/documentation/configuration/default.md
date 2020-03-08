@@ -61,7 +61,6 @@ Then once apis are enabled keep keys aside to configure Shopizer
 Register your domains and subdomains but aslo localhost for testing the solution
 
 
-
 - **AWS S3 Bucket**
 
 Infinispan is the technology used out of the box for managing images and files from a ingle instance of Shopizer. This solution works fine when working with Single instance and low to mid size traffic but would not scale for large traffic size or to serve multiple Shopizer running instances.

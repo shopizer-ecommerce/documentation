@@ -3,7 +3,8 @@
 
 - [Required configurations](/#/documentation/configuration)
 - [Database configuration](/#/documentation/database)
-- Search configuration
+- [Search configuration](/#/documentation/search)
+
 
 
 ## Modules
