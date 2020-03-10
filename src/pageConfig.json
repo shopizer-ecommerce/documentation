@@ -111,11 +111,11 @@
 				{
 					"route": "/search",
 					"name": "Search configuration",
-					"description": "EXPLAIN",
+					"description": "Configure Shopizer search with ElasticSearch",
 					"topics": [],
 					"iconContext": "fas",
 					"icon": "search",
-					"markdown": "/static/markdown/notavailable.md"
+					"markdown": "/static/markdown/documentation/search/search.md"
 				}
 			]
 		},
