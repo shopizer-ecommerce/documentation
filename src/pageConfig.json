@@ -126,7 +126,17 @@
 			"iconContext": "fas",
 			"icon": "project-diagram",
 			"topics": ["process"],
-			"children": [{
+			"children": [
+				{
+					"route": "/merchant",
+					"name": "Merchant functions",
+					"description": "Merchant functions described",
+					"iconContext": "fas",
+					"icon": "home",
+					"topics": ["merchant", "seller", "store", "retailer"],
+					"markdown": "/static/markdown/notavailable.md"
+				},
+				{
 					"route": "/catalog",
 					"name": "Catalog functions",
 					"description": "Catalog functions described",
