@@ -128,12 +128,12 @@
 			"topics": ["process"],
 			"children": [
 				{
-					"route": "/merchant",
-					"name": "Merchant functions",
-					"description": "Merchant functions described",
+					"route": "/vendors",
+					"name": "Vendors",
+					"description": "Merchants and customers vendors described",
 					"iconContext": "fas",
 					"icon": "home",
-					"topics": ["merchant", "seller", "store", "retailer"],
+					"topics": ["vendors", "merchant", "seller", "store", "retailer"],
 					"markdown": "/static/markdown/notavailable.md"
 				},
 				{
