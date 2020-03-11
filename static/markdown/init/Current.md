@@ -16,7 +16,7 @@ $ git clone https://github.com/shopizer-ecommerce/shopizer.git
 
 This will clone default Shopizer branch
 
-- Download **Shopizer zip file** from Git Hub
+- Or download **Shopizer zip file** from Git Hub
 
 [Shopizer download link](https://github.com/shopizer-ecommerce/shopizer)
 
