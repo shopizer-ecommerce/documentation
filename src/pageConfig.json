@@ -161,23 +161,23 @@
 					"icon": "file-alt",
 					"topics": ["process"],
 					"markdown": "/static/markdown/notavailable.md"
-        },
-        {
-          "route": "/translation",
-          "name": "Shopizer translation",
-          "description": "Translate to other lamguages",
-          "iconContext": "fas",
-          "icon": "language",
-          "markdown": "/static/markdown/software/translation.md"
-        },
-        {
-          "route": "/rules",
-          "name": "Rules system",
-          "description": "Shopizer's rule system",
-          "iconContext": "fas",
-          "icon": "language",
-          "markdown": "/static/markdown/notavailable.md"
-        },
+        		},
+				{
+				"route": "/translation",
+				"name": "Shopizer translation",
+				"description": "Translate to other lamguages",
+				"iconContext": "fas",
+				"icon": "language",
+				"markdown": "/static/markdown/software/translation.md"
+				},
+				{
+				"route": "/rules",
+				"name": "Rules system",
+				"description": "Shopizer's rule system",
+				"iconContext": "fas",
+				"icon": "language",
+				"markdown": "/static/markdown/notavailable.md"
+				},
 				{
 					"route": "/modules",
 					"name": "Shopizer modules",
@@ -322,7 +322,7 @@
 				{
 					"route": "/discover",
 					"name": "Discover Shopizer e-commerce data",
-					"description": "",
+					"description": "Use Kibana to discover order related data capable of giving insights to your e-commerce business",
 					"iconContext": "fas",
 					"icon": "file-alt",
 					"markdown": "/static/markdown/notavailable.md"
