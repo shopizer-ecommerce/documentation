@@ -96,9 +96,20 @@ PUT /_ingest/pipeline/timestamp
 	}]
 }
 
-PUT orders*/_settings
+PUT _template/orders
 {
-  "index.default_pipeline": "timestamp"
+  "index_patterns": ["orders-*"],
+  "settings": {
+    "index.default_pipeline": "timestamp"
+  }
+}
+
+PUT _template/carts
+{
+  "index_patterns": ["carts-*"],
+  "settings": {
+    "index.default_pipeline": "timestamp"
+  }
 }
 ```
 

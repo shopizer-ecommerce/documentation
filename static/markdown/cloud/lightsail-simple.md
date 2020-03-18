@@ -93,7 +93,7 @@ cd /etc/nginx/sites-available
 sudo nano reverse-proxy.conf
 ```
 
-Copy those following lines in open for edit window
+Copy those following lines in open for edit window (nano)
 
 ```sh
 server {
