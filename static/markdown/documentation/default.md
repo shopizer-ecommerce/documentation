@@ -1,9 +1,9 @@
 ## Configuration
 
 
-- [Required configurations](/#/documentation/configuration)
-- [Database configuration](/#/documentation/database)
-- [Search configuration](/#/documentation/search)
+- [Required configurations](/documentation/#/documentation/configuration)
+- [Database configuration](/documentation/#/documentation/database)
+- [Search configuration](/documentation/#/documentation/search)
 
 ## REST API
 
@@ -30,5 +30,5 @@
 ## Languages
 
 - Languages files
-- [Create new language](/#/software/translation)
+- [Create new language](/documentation/#/software/translation)
 
