@@ -69,4 +69,4 @@ Shopizer e-commerce system provides the following functionality:
 
 ## See also
 
-* [Shopizer architecture](/#/starting/architecture)
+* [Shopizer architecture](/documentation/#/starting/architecture)
