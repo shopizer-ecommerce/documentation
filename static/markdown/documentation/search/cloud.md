@@ -1,7 +1,7 @@
 
 ## Use Elastic Cloud SaaS
 
-Elastic Cloud is a SaaS allowing to create, deploy ans scal Elastic Search in the cloud that is managed by ElasticSearch. It is quite easy to create simple to complex deployments that can be scaled according to the demand for searching and indexing data from your Shopizer implementations. There is a cost of ownership for this solution that vary according to the usage use cases. Multi Store and Multi Tenant solution may require more resources and a bigger cluster than a simple B2C e-commerce solution.
+Elastic Cloud is a SaaS allowing to create, deploy ans scal Elastic Search in the cloud that is managed by ElasticSearch. It is quite easy to create simple to complex deployments that can be scaled according to the demand for searching and indexing data from your Shopizer implementations. There is a cost of ownership for this solution that vary according to the usage and use cases. Multi Store and Multi Tenant solution may require more resources and a bigger cluster than a simple B2C e-commerce solution.
 
 **Pros:** It is easy to create in minutesa deploment including latest ElasicSearch tools suck as Kibana, Elastic Search and more.
 
@@ -15,10 +15,9 @@ No specific requirements f0r creating an ElsticSearch cluster on Elastic Cloud. 
 
 Here is a sample of required resources for creating minmal elastic search cluster. A simple configuration can be acieved within a single node. ElasticSearch, Kibana (visualization tool) and APM (Monitoring) are recommended tools for creating this new deployment. 
 
-Simple deployment
+**Simple deployment**
 
 ![Simple deployment sample](/documentation/static/img/documentation/elastic-config.png "Elastc Cloud simple deployment")
-
 
 ### Shopizer configuraion
 
