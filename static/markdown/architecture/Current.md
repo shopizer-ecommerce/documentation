@@ -78,6 +78,6 @@ A component is a relatively independent part of a system. It is characterized by
 
 ## See also
 
-* [What is Shopizer](/#/starting/whatisshopizer)
-* [Beginning with Shopizer](/#/starting/starting)
+* [What is Shopizer](/documentation/#/starting/whatisshopizer)
+* [Beginning with Shopizer](/documentation/#/starting/starting)
 
