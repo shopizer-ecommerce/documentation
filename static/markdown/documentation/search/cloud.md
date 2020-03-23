@@ -17,7 +17,7 @@ Here is a sample of required resources for creating minmal elastic search cluste
 
 Simple deployment
 
-![Simple deployment sample](/documentation/static/img/elastic-config.png "Elastc Cloud simple deployment")
+![Simple deployment sample](/documentation/static/img/documentation/elastic-config.png "Elastc Cloud simple deployment")
 
 
 ### Shopizer configuraion
@@ -35,7 +35,7 @@ For this you need to have thos informations
 
 When clicking on Elastic Search component you can retrieve cluster name, host and port
 
-![Elastic Search cluster configuration](/documentation/static/img/elastic-host-config.png "Elastic Search cluster configuration")
+![Elastic Search cluster configuration](/documentation/static/img/documentation/elastic-host-config.png "Elastic Search cluster configuration")
 
 
 Configure elastic cloud cluster information
