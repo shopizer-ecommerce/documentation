@@ -127,7 +127,7 @@
 						},
 						{
 							"route": "/elastic-cloud",
-							"name": "Elastic Cloud configurtaion",
+							"name": "Elastic Cloud configuration",
 							"description": "Describes installation and configuration of ElasticSearch in the cloud",
 							"iconContext": "fas",
 							"icon": "home",
