@@ -47,5 +47,5 @@ See [Shopizer forum](https://groups.google.com/forum/#!forum/shopizer) for askin
 
 ## See also
 
-* [What is Shopizer](/#/starting/whatisshopizer)
-* [Build and run locally](/#/starting/buildandrunlocally)
+* [What is Shopizer](/docomentation/#/starting/whatisshopizer)
+* [Build and run locally](/documentation/#/starting/buildandrunlocally)

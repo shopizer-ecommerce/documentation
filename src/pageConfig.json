@@ -115,7 +115,26 @@
 					"topics": [],
 					"iconContext": "fas",
 					"icon": "search",
-					"markdown": "/static/markdown/documentation/search/search.md"
+					"children": [
+						{
+							"route": "/elastic-local",
+							"name": "Local configuration of ElasticSearch",
+							"description": "Describes local installation and configuration of ElasticSearch",
+							"iconContext": "fas",
+							"icon": "home",
+							"topics": ["search", "kibana", "elastic"],
+							"markdown": "/static/markdown/documentation/search/search.md"
+						},
+						{
+							"route": "/elastic-cloud",
+							"name": "Elastic Cloud configurtaion",
+							"description": "Describes installation and configuration of ElasticSearch in the cloud",
+							"iconContext": "fas",
+							"icon": "home",
+							"topics": ["search", "kibana", "elastic", "cloud"],
+							"markdown": "/static/markdown/documentation/search/cloud.md"
+						}
+					]
 				}
 			]
 		},
