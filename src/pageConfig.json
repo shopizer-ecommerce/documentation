@@ -59,11 +59,11 @@
 				{
 					"route": "/docker",
 					"name": "Run from Docker image",
-					"description": "Run latest Shopizer container",
-					"topics": [],
+					"description": "Run latest Shopizer image",
+					"topics": ["Docker", "DockerHub", "Docker Compose"],
 					"iconContext": "fab",
 					"icon": "docker",
-					"markdown": "/static/markdown/notavailable.md"
+					"markdown": "/static/markdown/docker/default.md"
 				},
 				{
 					"route": "/cloud",
