@@ -1,4 +1,4 @@
-# shopizer language pack generator
+# Shopizer language pack generator
 
 This software generates Shopizer labels for a new language. Shopizer comes with a few language packs already created such as english and frech; when a new language is required 2 options are possible (1) copy and create languages by hand or (2) use this software to auto-generate a new one.
 
