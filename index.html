@@ -2,13 +2,14 @@
     location.href = location.href.replace(/^http:/, 'https:')
 }
 
+console.log('Page clicked ' + location.href);
+
 var req = new XMLHttpRequest();
 req.overrideMimeType("application/json");
 req.open('GET', 'https://api.github.com/repos/shopizer-ecommerce/shopizer', true);
 req.onload  = function() {
    var jsonResponse = JSON.parse(req.responseText);
    version = 'v.' + jsonResponse.default_branch;
-   console.log(version);
    document.getElementById('ghBranchVersion').innerHTML=version;
 };
 req.send();</script><link href=/documentation/static/css/app.05b21913cbd26cd76e9d88dc2e9ea939.css rel=stylesheet></head><body><noscript>This is your fallback content in case JavaScript fails to load.</noscript><div id=app></div><script>!function(){"use strict"}();</script><script type=text/javascript src=/documentation/static/js/manifest.ecd9c6f99b5ce4b276c0.js></script><script type=text/javascript src=/documentation/static/js/vendor.642ba3d9d1c3324c613e.js></script><script type=text/javascript src=/documentation/static/js/app.4d9e161a34ff8a237596.js></script></body></html>
