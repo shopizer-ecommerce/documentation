@@ -37,9 +37,12 @@
           if (file.match(/\.(js|css)$/)) { %>
     <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
 <script>
+  
 if (location.protocol == 'http:' && location.hostname !== 'localhost') {
     location.href = location.href.replace(/^http:/, 'https:')
 }
+
+console.log('Page clicked ' + location.href);
 
 var req = new XMLHttpRequest();
 req.overrideMimeType("application/json");
@@ -47,12 +50,14 @@ req.open('GET', 'https://api.github.com/repos/shopizer-ecommerce/shopizer', true
 req.onload  = function() {
    var jsonResponse = JSON.parse(req.responseText);
    version = 'v.' + jsonResponse.default_branch;
-   console.log(version);
    document.getElementById('ghBranchVersion').innerHTML=version;
 };
 req.send();
 
 </script>
+
+
+
   </head>
   <body>
     <noscript>
@@ -62,6 +67,6 @@ req.send();
     <!-- Todo: only include in production -->
     <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
     <!-- built files will be auto injected -->
+ 
   </body>
-
-</html>
+  </html>
