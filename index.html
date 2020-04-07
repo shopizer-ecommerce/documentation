@@ -5,6 +5,16 @@
       document.write("<base href='"+ window.location.protocol +'//' + window.location.host + window.location.pathname + "' >");
     </script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4436714-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-4436714-10');
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,8 +51,6 @@
 if (location.protocol == 'http:' && location.hostname !== 'localhost') {
     location.href = location.href.replace(/^http:/, 'https:')
 }
-
-console.log('Page clicked ' + location.href);
 
 var req = new XMLHttpRequest();
 req.overrideMimeType("application/json");
