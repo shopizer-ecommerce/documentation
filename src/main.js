@@ -10,7 +10,8 @@ import {
   faAws,
   faAngular,
   faGithub,
-  faGoogle
+  faGoogle,
+  faYoutube
 } from '@fortawesome/free-brands-svg-icons'
 
 import {
@@ -192,7 +193,8 @@ library.add(
   faAws,
   faAngular,
   faGithub,
-  faGoogle
+  faGoogle,
+  faYoutube
 )
 
 const filter = (text, length, clamp) => {

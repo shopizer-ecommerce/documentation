@@ -57,6 +57,15 @@
 					"markdown": "/static/markdown/documentation/default.md"
 				},
 				{
+					"route": "/videotutorials",
+					"name": "Video tutorials",
+					"description": "Video tutorials on different topics",
+					"topics": ["Tutorials", "Examples", "Swagger UI", "AWS"],
+					"iconContext": "fab",
+					"icon": "youtube",
+					"markdown": "/static/markdown/documentation/videotutorials.md"
+				},
+				{
 					"route": "/docker",
 					"name": "Run from Docker image",
 					"description": "Run latest Shopizer image",

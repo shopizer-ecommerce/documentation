@@ -25,8 +25,8 @@
         :style="{ backgroundColor: tile.bgColor }"
       >
         <router-link :to="tile.path">
-          <font-awesome-icon class="card__icon" size="2x" :icon="['fas', tile.icon]" v-if="tile.icon !=='docker' && tile.icon !=='aws' && tile.icon !=='google' && tile.icon !=='github'"/>
-          <font-awesome-icon class="card__icon" size="2x" :icon="['fab', tile.icon]" v-if="tile.icon ==='docker' || tile.icon ==='aws' || tile.icon ==='google' || tile.icon ==='github'"/>
+          <font-awesome-icon class="card__icon" size="2x" :icon="['fas', tile.icon]" v-if="tile.icon !=='docker' && tile.icon !=='aws' && tile.icon !=='google' && tile.icon !=='github' && tile.icon !=='youtube'"/>
+          <font-awesome-icon class="card__icon" size="2x" :icon="['fab', tile.icon]" v-if="tile.icon ==='docker' || tile.icon ==='aws' || tile.icon ==='google' || tile.icon ==='github' || tile.icon ==='youtube'"/>
           <h4 class="card__title">{{tile.name}}</h4>
           <p class="card__text">{{tile.description}}</p>
         </router-link>
