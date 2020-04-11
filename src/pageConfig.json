@@ -156,6 +156,15 @@
 			"topics": ["process"],
 			"children": [
 				{
+					"route": "/users",
+					"name": "Users",
+					"description": "Administration users",
+					"iconContext": "fas",
+					"icon": "user",
+					"topics": ["users", "administrators"],
+					"markdown": "/static/markdown/documentation/software/users.md"
+				},
+				{
 					"route": "/vendors",
 					"name": "Vendors",
 					"description": "Merchants and customers vendors described",
