@@ -87,6 +87,13 @@ server {
             proxy_set_header X-Forwarded-Proto $scheme;
         }
 }
+
+server {
+    listen 80;
+    server_name ip_address;
+    return 301 $scheme://www.shopizer.com$request_uri;
+}
+
 #api
 server {
         listen 80;
@@ -107,13 +114,13 @@ server {
                add_header 'Content-Length' 0; return 204;
              }
              if ($request_method = 'POST') {
-               #add_header 'Access-Control-Allow-Origin' '*'; 
+               add_header 'Access-Control-Allow-Origin' '*'; 
                add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS'; 
                add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range'; 
                add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
              }
              if ($request_method = 'GET') {
-               #add_header 'Access-Control-Allow-Origin' '*'; 
+               add_header 'Access-Control-Allow-Origin' '*'; 
                add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS'; 
                add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range'; 
                add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
@@ -146,7 +153,7 @@ restart NGINX
 sudo systemctl restart nginx
 ```
 
-### Install Certbot on your instance
+### For SSL - Install Certbot on your instance
 
 Certbot installation commands from apt package manager. **This is only possible** if selected LightSail OS is Ubuntu.
 
@@ -180,14 +187,29 @@ Configure aws cli with secret key and secret access key
 aws configure
 ```
 
+Install software 
+
+```sh
+sudo npm install pm2 -g
+```
+
+Start process
+
 ```sh
 aws s3 cp s3://shopizer-website/dist.tar.gz ./website
+cd ~/website
 tar -xf dist.tar.gz
-sudo npm install pm2 -g
-NOPE nohup npm run serve:ssr &
-nohup npm run serve:ssr 2>&1 >> ./ng.log &
-
+cd code
 pm2 start local.js
+```
+
+Stop process
+
+```sh
+cd /home/ubuntu/website/code
+pm2 stop local.js
+cd ~
+rm -rf * /home/ubuntu/website/*
 ```
 
 Now run Certbot SSL configuration for NGINX. Make sure your domain points to AWS LightSail IP address before running next command. From your registrar configure DNS for a new A record or AAA record and point to your AWS instance IP address.
