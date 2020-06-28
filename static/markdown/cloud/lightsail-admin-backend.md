@@ -1,4 +1,4 @@
-This simple infrastructure allows running Shopizer on a simple AWS LightSail virtual maching. An Ubuntu based LightSail virtual machine will be configured with NGINX proxy server with SSL configured with Let's encrypt / Certbot SSL cerificate and Docker Compose running Shopizer, MySQL and ElasticSearch containers.
+This simple infrastructure allows running Shopizer on a simple AWS LightSail virtual maching. An Ubuntu based LightSail virtual machine will be configured with NGINX proxy server and Shopizer Admin Angular application with Shopizer backend
 
 > **$**
 > **AWS LightSail** 
@@ -6,12 +6,15 @@ This simple infrastructure allows running Shopizer on a simple AWS LightSail vir
 > Ubuntu 18.0.4 LTS
 > 4GB - 2vCPU - 80TB
 
+This configuration can be done on any the of virtual machine or on any on premise server. The reason for using AWS Lightsail is the simple way to configure working vm on specific regions with tools handy for specific firewall configuration and backup facility. All of this could also be created using simple EC2 instances on AWS.
+
+**###DOCUMENTATION TO BE COMPLETED SOON**
+
 
 ![AWS LightSail VM diagram](/documentation/static/img/documentation/Shopizer-TLS.png "Shopizer running on simple AWS LightSail VM")
 
 ## Requirements
 - AWS Account
-- A domain name with a registrar + access to DNS console
 - Have Shopizer configurations handy
 
 ## Installation instructions
@@ -111,11 +114,6 @@ server {
         }
 }
 
-server {
-    listen 80;
-    server_name ip_address;
-    return 301 $scheme://yourwebsite.ca$request_uri;
-}
 ```
 
 Change server_name to your target domain name
@@ -144,28 +142,12 @@ sudo systemctl restart nginx
 
 ### For SSL = Install Certbot on your instance
 
-Certbot installation commands from apt package manager. **This is only possible** if selected LightSail OS is Ubuntu.
-
-```sh
-sudo apt-get update
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get update
-sudo apt-get install python-certbot-nginx
-```
-
-Now run Certbot SSL configuration for NGINX. Make sure your domain points to AWS LightSail IP address before running next command. From your registrar configure DNS for a new A record or AAA record and point to your AWS instance IP address.
-
-```sh
-sudo certbot --nginx
-```
-
 ### Open LightSail required ports
 
 Lightsail
 Open ports
 80
-443
+9090
 22
 
 

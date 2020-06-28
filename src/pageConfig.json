@@ -405,7 +405,8 @@
 					"iconContext": "fas",
 					"icon": "cloud",
 					"markdown": "/static/markdown/cloud/default.md",
-					"children": [{
+					"children": [
+						{
 						"route": "/lightsail-simple",
 						"name": "AWS Lightsail simple deployment",
 						"description": "AWS Lightsail simple deployment with Docker Compose, NGINX and Let's encrypt SSL",
@@ -413,7 +414,16 @@
 						"icon": "",
 						"topics": ["cloud","aws"],
 						"markdown": "/static/markdown/cloud/lightsail-simple.md"
-					}
+						},
+						{
+							"route": "/lightsail-admin-backend",
+							"name": "AWS Lightsail with node - Angular admin - Shopizer backend",
+							"description": "AWS Lightsail simple deployment with Docker Compose, NGINX and Shopizer admin Angular app with Shopizer backend",
+							"iconContext": "fas",
+							"icon": "",
+							"topics": ["cloud","aws"],
+							"markdown": "/static/markdown/cloud/lightsail-admin-backend.md"
+						}
 				]
 				}
 			]
