@@ -170,8 +170,8 @@
 					"description": "Merchants and customers vendors described",
 					"iconContext": "fas",
 					"icon": "home",
-					"topics": ["vendors", "merchant", "seller", "store", "retailer"],
-					"markdown": "/static/markdown/software/rest/vendors.md"
+					"topics": ["vendors", "merchant", "seller", "store", "retailer", "merchant api"],
+					"markdown": "/static/markdown/software/vendors/vendors.md"
 				},
 				{
 					"route": "/catalog",
