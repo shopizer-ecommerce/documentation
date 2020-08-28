@@ -44,3 +44,9 @@
 Users belong to MERCHANT_STORE. Users are assigned to groups having predefined sets of permissions.
 
 ![User database tables](/documentation/static/img/documentation/users.png "User database tables")
+
+### Rest api Examples
+
+Some postman examples are available here (import collection in Postman)
+
+[Users management](https://github.com/shopizer-ecommerce/postman/tree/master/services/users)
