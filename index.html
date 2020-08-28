@@ -54,10 +54,10 @@ if (location.protocol == 'http:' && location.hostname !== 'localhost') {
 
 var req = new XMLHttpRequest();
 req.overrideMimeType("application/json");
-req.open('GET', 'https://api.github.com/repos/shopizer-ecommerce/shopizer', true);
+req.open('GET', 'https://api.github.com/repos/shopizer-ecommerce/shopizer/releases/latest', true);
 req.onload  = function() {
    var jsonResponse = JSON.parse(req.responseText);
-   version = 'v.' + jsonResponse.default_branch;
+   version = 'v.' + jsonResponse.tag_name;
    document.getElementById('ghBranchVersion').innerHTML=version;
 };
 req.send();

@@ -167,7 +167,7 @@
 				{
 					"route": "/vendors",
 					"name": "Vendors",
-					"description": "Merchants and customers vendors described",
+					"description": "Merchants and stores functionality",
 					"iconContext": "fas",
 					"icon": "home",
 					"topics": ["vendors", "merchant", "seller", "store", "retailer", "merchant api"],
@@ -175,8 +175,8 @@
 				},
 				{
 					"route": "/catalog",
-					"name": "Catalog functions",
-					"description": "Catalog functions described",
+					"name": "Catalog",
+					"description": "Catalog functionality described",
 					"iconContext": "fas",
 					"icon": "book",
 					"topics": ["process"],
