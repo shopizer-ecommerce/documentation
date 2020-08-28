@@ -10,3 +10,9 @@ Simple stores are unique stores managing their own products and inventory. This 
 
 Multiple independent stores can be managed in Shopizer. Each store has its own configuration and each store manages their own inventory, products, category and content. Each store requires their own shop that can be run on independent processes. Default jsp, Angular and React store fronts can be used as different processes to run each store.
 
+### Rest api Examples
+
+Some postman examples are available here (import collection in Postman)
+
+[vendors / stores management](https://github.com/shopizer-ecommerce/postman/tree/master/services/merchant)
+

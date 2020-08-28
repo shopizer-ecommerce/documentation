@@ -162,7 +162,7 @@
 					"iconContext": "fas",
 					"icon": "user",
 					"topics": ["users", "administrators"],
-					"markdown": "/static/markdown/documentation/software/users.md"
+					"markdown": "/static/markdown/software/users/users.md"
 				},
 				{
 					"route": "/vendors",
