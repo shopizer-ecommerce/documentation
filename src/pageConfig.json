@@ -158,7 +158,7 @@
 				{
 					"route": "/users",
 					"name": "Users",
-					"description": "Administration users",
+					"description": "Administration of users",
 					"iconContext": "fas",
 					"icon": "user",
 					"topics": ["users", "administrators"],
@@ -167,7 +167,7 @@
 				{
 					"route": "/vendors",
 					"name": "Vendors",
-					"description": "Merchants and stores functionality",
+					"description": "Merchants and stores administration",
 					"iconContext": "fas",
 					"icon": "home",
 					"topics": ["vendors", "merchant", "seller", "store", "retailer", "merchant api"],
@@ -176,7 +176,7 @@
 				{
 					"route": "/catalog",
 					"name": "Catalog",
-					"description": "Catalog functionality described",
+					"description": "Catalog fmanage,emt",
 					"iconContext": "fas",
 					"icon": "book",
 					"topics": ["process"],

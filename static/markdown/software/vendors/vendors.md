@@ -10,6 +10,19 @@ Simple stores are unique stores managing their own products and inventory. This 
 
 Multiple independent stores can be managed in Shopizer. Each store has its own configuration and each store manages their own inventory, products, category and content. Each store requires their own shop that can be run on independent processes. Default jsp, Angular and React store fronts can be used as different processes to run each store.
 
+### Schema
+
+**MERCHANT_STORE**
+**MERCHANT_LANGUAGE**
+
+A MERCHANT (vendor) can be standalone for single stores use cases. A MERCHANT can have a parent for franchiser / franchisee
+use cases.
+
+A MERCHANT can be support one to multiple languages
+
+![Merchant database table](/documentation/static/img/documentation/merchant-store.png "Merchant database table")
+
+
 ### Rest api Examples
 
 Some postman examples are available here (import collection in Postman)
