@@ -14,6 +14,7 @@
 			"description": "Getting started with shopizer",
 			"iconContext": "fas",
 			"icon": "address-book",
+			"markdown": "/static/markdown/default.md",
 			"children": [{
 					"route": "/whatisshopizer",
 					"name": "What is Shopizer",

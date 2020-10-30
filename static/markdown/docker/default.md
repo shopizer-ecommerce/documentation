@@ -66,7 +66,7 @@ services:
       - "JAVA_OPTS=-Xms1024m -Xmx1024m"
       - "elasticsearch.server.host=shopizer-es"
       - "elasticsearch.server.port=9200"
-      - "db.jdbcUrl=jdbc:mysql://shopizer-db:3306/SALESMANAGER?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"
+      - "db.jdbcUrl=jdbc:mysql://shopizer-db:3306/SALESMANAGER?autoReconnect=true&serverTimeZone=UTC&useUnicode=true&characterEncoding=UTF-8"
       - "db.user=shopizer_db_user"
       - "db.password=my-password"
       - "elasticsearch.security.password=NOTREQUIRED"

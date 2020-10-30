@@ -24,7 +24,7 @@ Technology stack is built on Java (requires java 8), Spring Boot (Core, Security
 
 Shopizer is a platform aiming to provide services, tools and connectors for building your own commerce cloud or on premise commerce application. 
 
-Services are built using Spring Framework providing packages for building enterprise applications. Shopizer persistence uses JPA for connecting to MySQL and has extensions for Google FirebaseNoSQL database and a set of interfaces for connecting to other external data sources.
+Services are built using Spring Framework providing packages for building enterprise applications. Shopizer persistence uses JPA for connecting to MySQL (prefered), H2, Postgres or Oracle and has extensions for Google FirebaseNoSQL database and a set of interfaces for connecting to other external data sources.
 
 Shopizer supports integration with external payment and shipping modules such as Stripe, Fedex, Braintree, USPS and more. A set of modules extensions allows using various content management storage such as JBoss Infinispan, AWS S3 and external web servers such as NGINX or Apache server. Elastic tools provide searching functionality.
 
