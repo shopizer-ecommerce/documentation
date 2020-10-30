@@ -1,6 +1,6 @@
 ## Database configuration
 
-Shopizer has been tested and supports H2, MySQL and MariaDB databases. Shopizer comes pre-configured with H2 database. H2 is an embedded database (http://www.h2database.com) configured by default to save data on files.
+Shopizer has been tested and supports H2, MySQL (recommended), MariaDB, Postgresql and Oracle databases. Shopizer comes pre-configured with H2 database. H2 is an embedded database (http://www.h2database.com) configured by default to save data on files.
 
 This pre-configuration should only be used for testing and never be used in a production environment.
 
@@ -56,3 +56,59 @@ Edit **My.cnf**
 ```sh
 lower_case_table_names=1
 ```
+
+### Configure Shopizer with Postgresql ###
+
+Create a new postgresql
+
+```sh
+CREATE DATABASE SHOPIZER;
+```
+
+Create schema
+
+```sh
+CREATE SCHEMA salesmanager;
+```
+
+Edit **sm-shop/src/main/resources/database.properties**
+
+```sh
+#POSTGRES
+db.jdbcUrl=jdbc:postgresql://localhost:5432/SHOPIZER
+db.user=postgres
+db.password=password
+db.driverClass=org.postgresql.Driver
+hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+db.preferredTestQuery=SELECT 1
+
+db.schema=SALESMANAGER
+hibernate.hbm2ddl.auto=update
+```
+
+### Configure Shopizer with Oracle ###
+
+Tested with Oracle Express and Oracle Entreprise. In this example we used Express 12c with portable database.
+
+Create new user
+
+```sh
+CREATE USER SALESMANAGER IDENTIFIED BY password;
+GRANT CONNECT, RESOURCE, DBA TO SALESMANAGER;
+```
+
+Edit **sm-shop/src/main/resources/database.properties**
+
+```sh
+#ORACLE
+db.jdbcUrl=jdbc:oracle:thin:@localhost:1521/XEPDB1
+db.user=SALESMANAGER
+db.password=password
+db.driverClass=oracle.jdbc.OracleDriver
+hibernate.dialect=org.hibernate.dialect.Oracle12cDialect
+db.preferredTestQuery=SELECT 1 FROM DUAL
+
+db.schema=SALESMANAGER
+hibernate.hbm2ddl.auto=update
+```
+
