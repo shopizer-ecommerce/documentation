@@ -86,6 +86,18 @@ db.schema=SALESMANAGER
 hibernate.hbm2ddl.auto=update
 ```
 
+Edit **shopizer/pom.xml**
+
+Un-comment both postgresql dependency
+```sh
+		<!--  postgres 
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		-->
+```
+
 ### Configure Shopizer with Oracle ###
 
 Tested with Oracle Express and Oracle Entreprise. In this example we used Express 12c with portable database.
@@ -110,5 +122,27 @@ db.preferredTestQuery=SELECT 1 FROM DUAL
 
 db.schema=SALESMANAGER
 hibernate.hbm2ddl.auto=update
+```
+
+
+Edit **shopizer/pom.xml**
+
+Un-comment both oracle dependency
+```sh
+		<!-- oracle -->
+		<!-- 
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>${oracle.version}</version> 
+		</dependency>
+		 -->
+```
+
+Also a vm argument is required in order to support LONG TEXT datatype
+Set runtime argument like this
+
+```sh
+-Doracle.jdbc.useFetchSizeWithLongColumn=true
 ```
 
