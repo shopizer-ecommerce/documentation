@@ -1,0 +1,45 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@3.0.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run:
+          name: Install app
+          command: |
+            npm install
+      - run:
+          name: Build app
+          command: |
+            npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build/*
+  prepare:
+    steps:
+      - attach_workspace:
+         at: .
+      - run:
+          name: Get gh-pages
+          command: |
+            git clone -b gh-pages https://github.com/shopizer-ecommerce/documentation.git .
+
+workflows:
+  version: 2
+  build_and_publish:
+    jobs:
+      - build
+      - prepare:
+          requires:
+            - build
