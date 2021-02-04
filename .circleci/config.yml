@@ -27,6 +27,8 @@ jobs:
           paths:
             - build/*
   prepare:
+    docker:
+      - image: circleci/node:latest
     steps:
       - attach_workspace:
          at: .
