@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: 'cimg/base:stable'
+      - image: circleci/node:latest
     steps:
       - checkout
       - restore_cache:
