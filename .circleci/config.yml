@@ -31,7 +31,7 @@ jobs:
           name: Get gh-pages
           command: |
             git clone -b gh-pages https://github.com/shopizer-ecommerce/documentation.git
-      - run: cd build | ls -al 
+      - run: ls -lR | more
 
 workflows:
   version: 2
