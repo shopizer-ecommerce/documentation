@@ -16,6 +16,7 @@ jobs:
       - run: npm version
       - run: npm install
       - run: npm run build
+      - run: ls -lR 
       - persist_to_workspace:
           root: .
           paths:
@@ -38,6 +39,6 @@ workflows:
   build_and_publish:
     jobs:
       - build
-      - prepare:
-          requires:
-            - build
+      #- prepare:
+      #    requires:
+      #      - build
