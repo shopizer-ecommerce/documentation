@@ -37,7 +37,8 @@ jobs:
       - run: rm ./documentation/service-worker.js
       - run: rm ./documentation/index.html
       - run: cp -pr ./dist/* ./documentation
-      - run: ls -lR
+      - run: |
+           (cd dist && git add . && git commit -m "latest" && git push origin gh-pages)
 
 workflows:
   version: 2
