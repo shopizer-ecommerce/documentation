@@ -43,7 +43,7 @@ jobs:
           fingerprints:
             - "a0:e8:49:30:83:27:36:0e:1d:75:cb:8f:28:25:1f:2c"
       - run: |
-           (cd documentation && git add . && git commit -m "latest" && git push origin gh-pages)
+           (cd documentation && git config --global user.email $EMAIL && git config --global user.name $GIT_COMMITTER_NAME git add . && git commit -m "latest" && git push origin gh-pages)
 
 workflows:
   version: 2
