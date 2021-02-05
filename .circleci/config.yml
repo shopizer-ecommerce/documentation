@@ -26,10 +26,11 @@ jobs:
     steps:
       - attach_workspace:
          at: .
+      - run: ls -al
       - run:
           name: Get gh-pages
           command: |
-            git clone -b gh-pages https://github.com/shopizer-ecommerce/documentation.git .
+            git clone -b gh-pages https://github.com/shopizer-ecommerce/documentation.git
 
 workflows:
   version: 2
