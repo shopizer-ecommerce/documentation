@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:10.16.3
     steps:
       - checkout
       - restore_cache:
@@ -25,7 +25,7 @@ jobs:
             - build/*
   prepare:
     docker:
-      - image: circleci/node:latest
+      - image: circleci/node:10.16.3
     steps:
       - attach_workspace:
          at: .
