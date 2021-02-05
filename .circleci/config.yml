@@ -18,9 +18,9 @@ jobs:
       - run: npm run build
       - run: ls -lR 
       - persist_to_workspace:
-          root: .
+          root: ./dist
           paths:
-            - build/*
+            - dist/*
   prepare:
     docker:
       - image: circleci/node:10.16.3
@@ -32,13 +32,13 @@ jobs:
           name: Get gh-pages
           command: |
             git clone -b gh-pages https://github.com/shopizer-ecommerce/documentation.git
-      - run: ls -lR | more
+      - run: ls -lR
 
 workflows:
   version: 2
   build_and_publish:
     jobs:
       - build
-      #- prepare:
-      #    requires:
-      #      - build
+      - prepare:
+          requires:
+            - build
