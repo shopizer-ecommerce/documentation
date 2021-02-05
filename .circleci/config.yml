@@ -39,6 +39,9 @@ jobs:
       - run: rm ./documentation/service-worker.js
       - run: rm ./documentation/index.html
       - run: cp -pr ./dist/* ./documentation
+      - add_ssh_keys:
+          fingerprints:
+            - "a0:e8:49:30:83:27:36:0e:1d:75:cb:8f:28:25:1f:2c"
       - run: |
            (cd documentation && git add . && git commit -m "latest" && git push origin gh-pages)
 
