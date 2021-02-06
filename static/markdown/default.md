@@ -1,5 +1,5 @@
 # What's new ! ![Star](/documentation/static/img/documentation/star-image-transparent.png "What's new")
 
-### Shopizer now supports new databases
+### Shopizer 2021 reference architecture ###
 
-Shopizer supports now Postgresql and Oracle databases. For more detais consult [Database configuration](/documentation/#/database)
+![Shopizer reference architecture](/documentation/static/img/documentation/Cloud-Layers-Architecture.jpg "Shopizer reference architecture")
