@@ -29,21 +29,18 @@ jobs:
     steps:
       - attach_workspace:
          at: .
-      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run:
           name: Get gh-pages
           command: |
-            git clone -b gh-pages git@github.com:shopizer-ecommerce/documentation.git
+            git clone -b gh-pages https://github.com/shopizer-ecommerce/documentation.git
 
       - run: rm -rf ./documentation/static
       - run: rm ./documentation/service-worker.js
       - run: rm ./documentation/index.html
       - run: cp -pr ./dist/* ./documentation
-      #- add_ssh_keys:
-      #    fingerprints:
-      #      - "a0:e8:49:30:83:27:36:0e:1d:75:cb:8f:28:25:1f:2c"
+
       - run: |
-           (cd documentation && git config --global user.email $EMAIL && git config --global user.name $GIT_COMMITTER_NAME git add . && git commit -m "latest" && git push origin gh-pages)
+           (cd documentation && git config --global user.email $EMAIL && git config --global user.name $GIT_COMMITTER_NAME git add . && git commit -m "latest" && git push https://$GIT_COMMITTER_NAME:$GIT_COMMITTER_PASSWORD@github.com/shopizer-ecommerce/documentation.git gh-pages)
 
 workflows:
   version: 2
