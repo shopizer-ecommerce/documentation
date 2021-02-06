@@ -40,7 +40,7 @@ jobs:
       - run: cp -pr ./dist/* ./documentation
 
       - run: |
-           (cd documentation && git config --global user.email $EMAIL && git config --global user.name $GIT_COMMITTER_NAME git add . && git commit -m "latest" && git push https://$GIT_COMMITTER_NAME:$GIT_COMMITTER_PASSWORD@github.com/shopizer-ecommerce/documentation.git gh-pages)
+           (cd documentation && git config --global user.email $EMAIL && git config --global user.name $GIT_COMMITTER_NAME && git add . && git commit -m "latest" && git push https://$GIT_COMMITTER_NAME:$GIT_COMMITTER_PASSWORD@github.com/shopizer-ecommerce/documentation.git gh-pages)
 
 workflows:
   version: 2
