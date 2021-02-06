@@ -15,7 +15,7 @@ Shopizer implements B2B, B2C and C2C functionality offering the following servic
 * Promotions
 * Search
 
-Technology stack is built on Java (requires java 8), Spring Boot (Core, Security, DATA JPA), JBoss Drools rules engine, Elastic Search and cloud services offered by GCP and AWS for infrastructure, storage and security.
+Technology stack is built on Java (java 8 0 java 11), Spring Boot (Core, Security, DATA JPA), JBoss Drools rules engine, Elastic Search and cloud services offered by GCP, AWS and Azure for infrastructure, storage and security.
 
 
 ## Shopizer high level architecture
@@ -67,7 +67,7 @@ A component is a relatively independent part of a system. It is characterized by
 
 **Shop**
 
-- Controller
+- Controller (Legacy)
 - Security
 - API
 - Façade
@@ -75,6 +75,10 @@ A component is a relatively independent part of a system. It is characterized by
 
 
 ---
+
+## Other documents
+
+* [Architecture reference](https://drive.google.com/file/d/1VuusQj5Y2sPFDqnO1Vef2UZAGbaBJ7qy/view?usp=sharing)
 
 ## See also
 
