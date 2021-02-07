@@ -68,12 +68,21 @@
 				},
 				{
 					"route": "/docker",
-					"name": "Run from Docker image",
-					"description": "Run latest Shopizer image",
+					"name": "Run Shopizer from Docker image",
+					"description": "Run latest Shopizer Docker container",
 					"topics": ["Docker", "DockerHub", "Docker Compose"],
 					"iconContext": "fab",
 					"icon": "docker",
 					"markdown": "/static/markdown/docker/default.md"
+				},
+				{
+					"route": "/docker-compose",
+					"name": "Run using Docker Compose",
+					"description": "Run latest Shopizer components in Docker Copose",
+					"topics": ["Docker", "DockerHub", "Docker Compose"],
+					"iconContext": "fab",
+					"icon": "docker",
+					"markdown": "/static/markdown/docker/compose.md"
 				},
 				{
 					"route": "/cloud",
