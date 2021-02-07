@@ -30,6 +30,9 @@ Shopizer e-commerce system provides the following functionality:
   |Scope|Features|
 |--- |--- |
 |Software|Supports MySQL|
+|Software|Supports Oracle|
+||Supports Postgresql|
+||Supports MariaDB|
 ||Supports H2|
 ||Java - Spring Boot|
 ||REST API|
@@ -60,7 +63,12 @@ Shopizer e-commerce system provides the following functionality:
 ||Promotions based vatious property (quantity of items, customer...)|
 |REST API|Administration api|
 ||Commerce api|
-||Customerapi|
+||Customer api|
+||Order api|
+||Cart api|
+||Shipping api|
+||Payment api|
+||User api|
 ||Search|
 |Search|Based on Elastic Search|
 ||Search items|
