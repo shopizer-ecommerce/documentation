@@ -4,7 +4,7 @@ This simple infrastructure allows running Shopizer on a simple AWS LightSail vir
 > **AWS LightSail** 
 > Linux / Unix - OS Only
 > Ubuntu 18.0.4 LTS
-> 4GB - 2vCPU - 80TB
+> 4GB - 2vCPU - 80GB
 
 
 ![AWS LightSail VM diagram](/documentation/static/img/documentation/Shopizer-TLS.png "Shopizer running on simple AWS LightSail VM")
