@@ -35,6 +35,15 @@ mysql>GRANT ALL ON SALESMANAGER.* TO testuser@localhost;
 mysql>FLUSH PRIVILEGES;
 ```
 
+**Create user that can connect from everywhere**
+
+```sh
+mysql>CREATE USER 'mysuer'@'%' IDENTIFIED BY 'mypassword';
+mysql>GRANT USAGE, SELECT ON MYDB.* TO 'mysuer'@'%' with grant option;
+mysql>GRANT ALL ON MYDB.* TO 'mysuer'@'%';
+mysql>FLUSH PRIVILEGES;
+```
+
 Edit **sm-shop/src/main/resources/database.properties**
 
 ```sh
