@@ -69,9 +69,29 @@ Our recommendation for being able to manage images and files at scal is to use c
 
 Cration of S3 bucket and Cloudfront distribution requires an AWS account.
 
->See this instruction video for creating an S3 bucket and a Cloudfront distribution on AWS
+>See this instruction video [https://www.google.com/recaptcha/admin/create] for creating an S3 bucket and a Cloudfront distribution on AWS.
 
-- Google GCP Bucket
+Bucket creation in AWS
+
+Bucket must be set public and have this policy attached
+
+```sh
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::bucketname/*"
+        }
+    ]
+}
+
+```
+
+- **Google GCP Bucket**
 
 Google Cloud Platform (GCP) also offers bucket and cloudfront technology for scaling images and files distribution.
 
