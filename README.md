@@ -32,6 +32,8 @@ npm test
 npm run gh-pages
 ```
 
+Push to CircleCI
+
 Youtube image
 
 https://img.youtube.com/vi/<video id>/0.jpg

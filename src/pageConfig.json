@@ -118,14 +118,24 @@
 					"iconContext": "fas",
 					"icon": "book",
 					"markdown": "/static/markdown/documentation/configuration/default.md"
-				},
+		},
         {
 					"route": "/database",
 					"name": "Database configuration",
 					"description": "Configure Shopizer database",
 					"iconContext": "fas",
 					"icon": "database",
-					"markdown": "/static/markdown/documentation/database/default.md"
+					"markdown": "/static/markdown/documentation/database/default.md",
+					"children": [
+						{
+									"route": "/countryandzones",
+									"name": "Country and Zones",
+									"description": "Country and Zones reference data",
+									"iconContext": "fas",
+									"icon": "book",
+									"markdown": "/static/markdown/schema/country/default.md"
+						}
+					]
 				},
 				{
 					"route": "/search",
