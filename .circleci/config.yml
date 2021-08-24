@@ -61,7 +61,7 @@ jobs:
 
       - run:
           name: push
-          command: git push https://$GIT_TOKEN@https://github.com/shopizer-ecommerce/documentation.git gh-pages
+          command: git push https://$GIT_TOKEN@github.com/shopizer-ecommerce/documentation.git gh-pages
           working_directory: documentation
 
       #- run: |
