@@ -61,7 +61,7 @@ jobs:
 
       - run:
           name: push
-          command: git push https://$GIT_TOKEN@github.com/$GIT_AUTHOR_NAME/documentation.git gh-pages.git
+          command: git push https://$GIT_TOKEN@github.com/$GIT_AUTHOR_NAME/documentation.git gh-pages
           working_directory: documentation
 
       #- run: |
