@@ -46,7 +46,7 @@ jobs:
 
       - run:
           name: config user name
-          command: git config --global user.name $GIT_COMMITTER_NAME
+          command: git config --global user.name $GIT_AUTHOR_NAME
           working_directory: documentation
 
       - run:
