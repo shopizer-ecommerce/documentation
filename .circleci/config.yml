@@ -40,6 +40,16 @@ jobs:
       - run: cp -pr ./dist/* ./documentation
 
       - run:
+          name: config email
+          command: git config --global user.email $EMAIL
+          working_directory: documentation
+
+      - run:
+          name: config user name
+          command: git config --global user.name $GIT_COMMITTER_NAME
+          working_directory: documentation
+
+      - run:
           name: add files
           command: git add .
           working_directory: documentation
