@@ -39,8 +39,25 @@ jobs:
       - run: rm ./documentation/index.html
       - run: cp -pr ./dist/* ./documentation
 
-      - run: |
-           (cd documentation && git config --global user.email $EMAIL && git config --global user.name $GIT_COMMITTER_NAME && git add . && git commit -m "[skip ci] latest" && git push https://$GIT_COMMITTER_NAME:$GIT_TOKEN@github.com/shopizer-ecommerce/documentation.git gh-pages)
+      - run:
+          name: add files
+          command: git add .
+          working_directory: documentation
+
+      - run:
+          name: commit
+          command: git commit -m "[skip ci] latest"
+          working_directory: documentation
+
+      - run:
+          name: push
+          command: git push https://$GIT_TOKEN@github.com/$GIT_AUTHOR_NAME/documentation.git gh-pages.git
+          working_directory: documentation
+
+      #- run: |
+      #     (git config --global user.email $EMAIL && git config --global user.name $GIT_COMMITTER_NAME && git add . && git commit -m "[skip ci] latest" && git push https://$GIT_COMMITTER_NAME:$GIT_TOKEN@github.com/shopizer-ecommerce/documentation.git gh-pages)
+
+        
 
 workflows:
   version: 2
