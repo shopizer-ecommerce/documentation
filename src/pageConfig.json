@@ -125,17 +125,7 @@
 					"description": "Configure Shopizer database",
 					"iconContext": "fas",
 					"icon": "database",
-					"markdown": "/static/markdown/documentation/database/default.md",
-					"children": [
-						{
-									"route": "/countryandzones",
-									"name": "Country and Zones",
-									"description": "Country and Zones reference data",
-									"iconContext": "fas",
-									"icon": "book",
-									"markdown": "/static/markdown/schema/country/default.md"
-						}
-					]
+					"markdown": "/static/markdown/documentation/database/default.md"
 				},
 				{
 					"route": "/search",
@@ -289,7 +279,17 @@
 			"description": "anything about process",
 			"iconContext": "fas",
 			"icon": "project-diagram",
-			"topics": ["database"]
+			"topics": ["database"],
+			"children": [
+				{
+							"route": "/countryandzones",
+							"name": "Country and Zones",
+							"description": "Country and Zones reference data",
+							"iconContext": "fas",
+							"icon": "book",
+							"markdown": "/static/markdown/schema/country/default.md"
+				}
+			]
 		},
 		{
 			"route": "/rest",
