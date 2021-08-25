@@ -28,6 +28,5 @@ Country codes are defined in shopizer sm-core SchemaConstants (com.salesmanager.
 Country description are derived from java Locale class and then saved to
 CountryDescription table
 
-/Users/carlsamson/Documents/dev/workspaces/documentation2/documentation/static/img/documentation/country-zones.png
 ![Country and Zones](/documentation/static/img/documentation/country-zones.png "Country and zones refernece data")
 
