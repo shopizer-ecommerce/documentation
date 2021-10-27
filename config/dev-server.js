@@ -1,11 +1,9 @@
-'use strict'
 
-require('./check-versions')()
+// require('../../documentation/build/check-versions')()
 
-const config = require('../legacyConfig')
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
-}
+// if (!process.env.NODE_ENV) {
+  // process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
+// }
 
 const opn = require('opn')
 const path = require('path')
@@ -13,8 +11,9 @@ const express = require('express')
 const webpack = require('webpack')
 const proxyMiddleware = require('http-proxy-middleware')
 const webpackConfig = process.env.NODE_ENV === 'testing'
-  ? require('./webpack.prod.conf')
-  : require('./webpack.dev.conf')
+  ? require('./webpack.prod.js')
+  : require('./webpack.dev.js')
+const config = require('./index.js')
 
 // default port where dev server listens for incoming traffic
 const port = process.env.PORT || config.dev.port
@@ -29,7 +28,6 @@ const compiler = webpack(webpackConfig)
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  quiet: true
 })
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {

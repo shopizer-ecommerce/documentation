@@ -2,8 +2,9 @@
 
 const path = require('path')
 const utils = require('./utils')
-const config = require('../config')
+const config = require('../legacyConfig')
 const vueLoaderConfig = require('./vue-loader.conf')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -29,6 +30,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
         test: /\.md$/,
         loader: 'vue-markdown-loader',
         options: {
@@ -40,15 +45,15 @@ module.exports = {
         test: /\.s[a|c]ss$/,
         loader: 'style!css!sass'
       },
-      {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
+      // {
+      //   test: /\.(js|vue)$/,
+      //   loader: 'eslint-loader',
+      //   enforce: 'pre',
+      //   include: [resolve('src'), resolve('test')],
+      //   options: {
+      //     formatter: require('eslint-friendly-formatter')
+      //   }
+      // },
       {
         test: /\.vue$/,
         loader: 'vue-loader',

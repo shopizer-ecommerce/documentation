@@ -4,7 +4,7 @@
 
 const utils = require('./utils')
 const webpack = require('webpack')
-const merge = require('webpack-merge')
+const {merge} = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
 
 const webpackConfig = merge(baseConfig, {
@@ -22,7 +22,7 @@ const webpackConfig = merge(baseConfig, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': require('../config/test.env')
+      'process.env': require('../legacyConfig/test.env')
     })
   ]
 })

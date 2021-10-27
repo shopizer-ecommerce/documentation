@@ -1,7 +1,7 @@
 import pageConfig from '../pageConfig.json'
 import axios from 'axios'
 
-const DefaultPageRenderer = () => import('@/views/DefaultPageRenderer')
+const DefaultPageRenderer = () => import('../views/DefaultPageRenderer')
 var metaMap = {}
 
 /**
