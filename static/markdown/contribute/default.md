@@ -6,7 +6,9 @@ Shopizer is driven by a community of Java and e-commerce passionates. If you are
 Need to interact with us ? Join our ChatOps on slack ! This is through invite only so [send us](http://www.shopizer.com/contact.html) your email address, you'll be added to our live discussion group.
 
 
-Slack
+[Slack](https://shopizer-slackin.herokuapp.com/) channel entry point
+
+[Our Website](https://www.shopizer.com/) for further information
 
 TODO describe PR
 

@@ -100,7 +100,7 @@
 					"topics": [],
 					"iconContext": "fas",
 					"icon": "github",
-					"markdown": "/static/markdown/notavailable.md"
+					"markdown": "/static/markdown/contribute/default.md"
 				}
 			]
 		},
@@ -398,7 +398,7 @@
 		},		
 		{
 			"route": "/deployment",
-			"name": "Deploying Shopizer",
+			"name": "Deploying Shopizer Monolith",
 			"description": "Deploying Shopizer on premise and in the Cloud",
 			"iconContext": "fas",
 			"icon": "address-book",
@@ -413,6 +413,58 @@
 				{
 					"route": "/clouddeployment",
 					"name": "Deploy Shopizer on AWS",
+					"description": "",
+					"iconContext": "fab",
+					"icon": "aws",
+					"markdown": "/static/markdown/notavailable.md"
+				},
+				{
+					"route": "/cloud",
+					"name": "Deploy Shopizer on various clouds",
+					"description": "",
+					"iconContext": "fas",
+					"icon": "cloud",
+					"markdown": "/static/markdown/cloud/default.md",
+					"children": [
+						{
+						"route": "/lightsail-simple",
+						"name": "AWS Lightsail simple deployment",
+						"description": "AWS Lightsail simple deployment with Docker Compose, NGINX and Let's encrypt SSL",
+						"iconContext": "fas",
+						"icon": "",
+						"topics": ["cloud","aws"],
+						"markdown": "/static/markdown/cloud/lightsail-simple.md"
+						},
+						{
+							"route": "/lightsail-admin-backend",
+							"name": "AWS Lightsail with node - Angular admin - Shopizer backend",
+							"description": "AWS Lightsail simple deployment with Docker Compose, NGINX and Shopizer admin Angular app with Shopizer backend",
+							"iconContext": "fas",
+							"icon": "",
+							"topics": ["cloud","aws"],
+							"markdown": "/static/markdown/cloud/lightsail-admin-backend.md"
+						}
+				]
+				}
+			]
+		},
+		{
+			"route": "/micro",
+			"name": "Deploying Microservices",
+			"description": "Deploying Shopizer microservices and in the Cloud",
+			"iconContext": "fas",
+			"icon": "address-book",
+			"children": [{
+					"route": "/microservices",
+					"name": "Services",
+					"description": "",
+					"iconContext": "fas",
+					"icon": "desktop",
+					"markdown": "/static/markdown/notavailable.md"
+				},
+				{
+					"route": "/microservice-docreference",
+					"name": "Reference Documentation",
 					"description": "",
 					"iconContext": "fab",
 					"icon": "aws",
