@@ -5,9 +5,10 @@ const config = require('../legacyConfig')
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.assetsPath = function (_path) {
-  const assetsSubDirectory = process.env.NODE_ENV === 'production'
-    ? config.build.assetsSubDirectory
-    : config.dev.assetsSubDirectory
+  const assetsSubDirectory =
+    process.env.NODE_ENV === 'production'
+      ? config.build.assetsSubDirectory
+      : config.dev.assetsSubDirectory
   return path.posix.join(assetsSubDirectory, _path)
 }
 
@@ -18,19 +19,19 @@ exports.cssLoaders = function (options) {
     loader: 'css-loader',
     options: {
       minimize: process.env.NODE_ENV === 'production',
-      sourceMap: options.sourceMap
-    }
+      sourceMap: options.sourceMap,
+    },
   }
 
   // generate loader string to be used with extract text plugin
-  function generateLoaders (loader, loaderOptions) {
+  function generateLoaders(loader, loaderOptions) {
     const loaders = [cssLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
         options: Object.assign({}, loaderOptions, {
-          sourceMap: options.sourceMap
-        })
+          sourceMap: options.sourceMap,
+        }),
       })
     }
 
@@ -41,7 +42,7 @@ exports.cssLoaders = function (options) {
       //   use: loaders,
       //   fallback: 'vue-style-loader'
       // })
-      console.log("extract")
+      console.log('extract')
     } else {
       return ['vue-style-loader'].concat(loaders)
     }
@@ -55,7 +56,7 @@ exports.cssLoaders = function (options) {
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),
-    styl: generateLoaders('stylus')
+    styl: generateLoaders('stylus'),
   }
 }
 
@@ -67,7 +68,7 @@ exports.styleLoaders = function (options) {
     const loader = loaders[extension]
     output.push({
       test: new RegExp('\\.' + extension + '$'),
-      use: loader
+      use: loader,
     })
   }
   return output

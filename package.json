@@ -11,6 +11,7 @@
     "build": "node build/build.js; node build/build.search.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
+    "format": "prettier --write --svelte-sort-order scripts-markup-styles \"**/*.{js,vue}\"",
     "test:local": "npm run unit && npm run e2e",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
@@ -67,6 +68,7 @@
     "path": "^0.12.7",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
     "sass": "^1.43.4",
     "sass-loader": "^10.0.3",
     "style-loader": "^3.2.1",
@@ -91,5 +93,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
 }

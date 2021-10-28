@@ -11,7 +11,7 @@ import {
   faAngular,
   faGithub,
   faGoogle,
-  faYoutube
+  faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 
 import {
@@ -99,7 +99,7 @@ import {
   faWindowClose,
   faClone,
   faChartLine,
-  faFlag
+  faFlag,
 } from '@fortawesome/free-solid-svg-icons'
 
 Vue.use(VueTreeNavigation)
@@ -214,5 +214,5 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 })

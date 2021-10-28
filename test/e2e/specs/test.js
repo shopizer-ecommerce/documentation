@@ -14,5 +14,5 @@ module.exports = {
       .assert.elementPresent('.header')
       .assert.containsText('span', 'playbook')
       .end()
-  }
+  },
 }

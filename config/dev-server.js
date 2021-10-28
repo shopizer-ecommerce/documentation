@@ -1,8 +1,7 @@
-
 // require('../../documentation/build/check-versions')()
 
 // if (!process.env.NODE_ENV) {
-  // process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
+// process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 // }
 
 const opn = require('opn')
@@ -10,9 +9,10 @@ const path = require('path')
 const express = require('express')
 const webpack = require('webpack')
 const proxyMiddleware = require('http-proxy-middleware')
-const webpackConfig = process.env.NODE_ENV === 'testing'
-  ? require('./webpack.prod.js')
-  : require('./webpack.dev.js')
+const webpackConfig =
+  process.env.NODE_ENV === 'testing'
+    ? require('./webpack.prod.js')
+    : require('./webpack.dev.js')
 const config = require('./index.js')
 
 // default port where dev server listens for incoming traffic
@@ -31,7 +31,7 @@ const devMiddleware = require('webpack-dev-middleware')(compiler, {
 })
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
-  log: false
+  log: false,
 })
 // force page reload when html-webpack-plugin template changes
 // compiler.plugin('compilation', function (compilation) {
@@ -61,13 +61,16 @@ app.use(require('connect-history-api-fallback')())
 app.use(devMiddleware)
 
 // serve pure static assets
-const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
+const staticPath = path.posix.join(
+  config.dev.assetsPublicPath,
+  config.dev.assetsSubDirectory
+)
 app.use(staticPath, express.static('./static'))
 
 const uri = 'http://localhost:' + port
 
 let _resolve
-const readyPromise = new Promise(resolve => {
+const readyPromise = new Promise((resolve) => {
   _resolve = resolve
 })
 
@@ -87,5 +90,5 @@ module.exports = {
   ready: readyPromise,
   close: () => {
     server.close()
-  }
+  },
 }

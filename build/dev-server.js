@@ -12,9 +12,10 @@ const path = require('path')
 const express = require('express')
 const webpack = require('webpack')
 const proxyMiddleware = require('http-proxy-middleware')
-const webpackConfig = process.env.NODE_ENV === 'testing'
-  ? require('./webpack.prod.conf')
-  : require('./webpack.dev.conf')
+const webpackConfig =
+  process.env.NODE_ENV === 'testing'
+    ? require('./webpack.prod.conf')
+    : require('./webpack.dev.conf')
 
 // default port where dev server listens for incoming traffic
 const port = process.env.PORT || config.dev.port
@@ -29,11 +30,11 @@ const compiler = webpack(webpackConfig)
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  quiet: true
+  quiet: true,
 })
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
-  log: false
+  log: false,
 })
 // force page reload when html-webpack-plugin template changes
 // compiler.plugin('compilation', function (compilation) {
@@ -63,13 +64,16 @@ app.use(require('connect-history-api-fallback')())
 app.use(devMiddleware)
 
 // serve pure static assets
-const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
+const staticPath = path.posix.join(
+  config.dev.assetsPublicPath,
+  config.dev.assetsSubDirectory
+)
 app.use(staticPath, express.static('./static'))
 
 const uri = 'http://localhost:' + port
 
 let _resolve
-const readyPromise = new Promise(resolve => {
+const readyPromise = new Promise((resolve) => {
   _resolve = resolve
 })
 
@@ -89,5 +93,5 @@ module.exports = {
   ready: readyPromise,
   close: () => {
     server.close()
-  }
+  },
 }
