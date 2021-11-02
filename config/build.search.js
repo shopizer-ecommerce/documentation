@@ -5,7 +5,7 @@ const path = require('path')
 
 const removeMd = require('remove-markdown')
 
-const config = require('./config')
+const config = require('./index.js')
 const pagesConfig = require('../src/pageConfig')
 const pages = pagesConfig.pages
 
@@ -73,14 +73,27 @@ const traversTree = (pages, parent) => {
 
 traversTree(pages)
   .then((PAGE_CONTENTS) => {
+    // console.log("page contents",PAGE_CONTENTS);
+    // fs.mkdir("../dist","static",{recursive: true},() => {
+      // console.log('complete')
+    // });
+    // fs.open("content.json","w+",(err,test) => {
+
+    //   if (err) throw err
+    //   console.log('complete',test)
+    // })
+    fs.mkdir(path.join(config.build.assetsRoot,'static'),
+    () => {
+      console.log('complete')
+    });
     fs.writeFile(
-      path.join(config.build.assetsRoot, '/src/pageConfig.json'),
+      path.join(config.build.assetsRoot, 'static/content.json'),
       JSON.stringify(PAGE_CONTENTS),
       (err) => {
         if (err) throw err
-        console.log('complete')
       }
     )
+    console.log("dirname",config.build.assetsRoot)
   })
   .catch((error) => {
     console.log('error', error)
