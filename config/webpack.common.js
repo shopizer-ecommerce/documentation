@@ -4,7 +4,7 @@ const paths = require('./paths')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const vueLoaderConfig = require("../build/vue-loader.conf")
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
@@ -69,8 +69,9 @@ module.exports = {
         },
       },
       // JavaScript: Use Babel to transpile JavaScript files
-      { test: /\.vue$/, loader: 'vue-loader' },
-
+      { test: /\.vue$/, loader: 'vue-loader',        options: vueLoaderConfig,
+    },
+      
       // { test: /\.js$/, exclude: /node_modules/, use: ["babel-loader"] },
       // Styles: Inject CSS into the head with source maps
       {
