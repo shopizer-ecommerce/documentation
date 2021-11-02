@@ -121,7 +121,7 @@ export default {
       const path = `${pathName.substring(
         0,
         pathName.length - 1
-      )}/static/content.json`
+      )}/src/pageConfig.json`
 
       axios
         .get(path)
