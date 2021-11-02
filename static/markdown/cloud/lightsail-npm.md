@@ -7,7 +7,7 @@ This simple infrastructure allows running Shopizer on a simple AWS LightSail vir
 > 2GB - 1vCPU - 80GB
 
 
-![NPM on AWS LightSail VM diagram](/documentation/static/img/documentation/Simple-NPM-NGINX.png "Simple npm instance on AWS")
+![NPM on AWS LightSail VM diagram](/static/img/documentation/Simple-NPM-NGINX.png "Simple npm instance on AWS")
 
 ## Requirements
 - AWS Account

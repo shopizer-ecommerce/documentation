@@ -11,7 +11,7 @@ This configuration can be done on any the of virtual machine or on any on premis
 **###DOCUMENTATION TO BE COMPLETED SOON**
 
 
-![AWS LightSail VM diagram](/documentation/static/img/documentation/Shopizer-TLS.png "Shopizer running on simple AWS LightSail VM")
+![AWS LightSail VM diagram](/static/img/documentation/Shopizer-TLS.png "Shopizer running on simple AWS LightSail VM")
 
 ## Requirements
 - AWS Account

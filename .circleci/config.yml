@@ -34,7 +34,7 @@ jobs:
           command: |
             git clone -b gh-pages https://github.com/shopizer-ecommerce/documentation.git
 
-      - run: rm -rf ./documentation/static
+      - run: rm -rf ./static
       - run: rm ./documentation/service-worker.js
       - run: rm ./documentation/index.html
       - run: cp -pr ./dist/* ./documentation
