@@ -1,72 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>
-      document.write("<base href='"+ window.location.protocol +'//' + window.location.host + window.location.pathname + "' >");
-    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4436714-10"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-4436714-10');
-    </script>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- disable caching -->
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-    <meta http-equiv="pragma" content="no-cache" />
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Shopizer</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-16x16.png">
-    <!--[if IE]><link rel="shortcut icon" href="/static/img/icons/favicon.ico"><![endif]-->
-    <!-- Add to home screen for Android and modern mobile browsers -->
-    <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>static/manifest.json">
-    <meta name="theme-color" content="#4DBA87">
-    <!-- Add to home screen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="playbook">
-    <link rel="apple-touch-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/apple-touch-icon-152x152.png">
-    <link rel="mask-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/safari-pinned-tab.svg" color="#4DBA87">
-    <!-- Add to home screen for Windows -->
-    <meta name="msapplication-TileImage" content="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/msapplication-icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#000000">
-    <% for (var chunk of webpack.chunks) {
-        for (var file of chunk.files) {
-          if (file.match(/\.(js|css)$/)) { %>
-    <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
-<script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="<%= htmlWebpackPlugin.files.publicPath %>static/manifest.json"
+    />
+
+    <!--<link rel="icon" href="favicon.ico">-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--Used for the Vue Employee components-->
+
+    <title>Webpack 5 boilerplate with a Vue App</title>
+
+    <noscript>
+      <strong
+        >This vue app do not work properly without JavaScript enabled. Please
+        enable it to continue.</strong
+      >
+    </noscript>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $("body").click(function (evt) {
+        if (!$(evt.target).is("#container")) {
+          if (!$(".navbar-collapse").is(":hidden")) {
+            $(".navbar-collapse").collapse("hide");
+            // alert("The mobile menu will be hidden....");
+          }
+        }
+      });
+    </script>
+
   
-if (location.protocol == 'http:' && location.hostname !== 'localhost') {
-    location.href = location.href.replace(/^http:/, 'https:')
-}
+    <script>
+      if (location.protocol == "http:" && location.hostname !== "localhost") {
+        location.href = location.href.replace(/^http:/, "https:");
+      }
 
-var req = new XMLHttpRequest();
-req.overrideMimeType("application/json");
-req.open('GET', 'https://api.github.com/repos/shopizer-ecommerce/shopizer/releases/latest', true);
-req.onload  = function() {
-   var jsonResponse = JSON.parse(req.responseText);
-   version = 'v.' + jsonResponse.tag_name;
-   document.getElementById('ghBranchVersion').innerHTML=version;
-};
-req.send();
+      var req = new XMLHttpRequest();
+      req.overrideMimeType("application/json");
+      req.open(
+        "GET",
+        "https://api.github.com/repos/shopizer-ecommerce/shopizer/releases/latest",
+        true
+      );
+      req.onload = function () {
+        var jsonResponse = JSON.parse(req.responseText);
+        version = "v." + jsonResponse.tag_name;
+        document.getElementById("ghBranchVersion").innerHTML = version;
+      };
+      req.send();
+    </script>
 
-</script>
-
-
-
+    <script type="application/javascript">
+      // Showing a message to the User if not using Google Chrome !
+      if (!/Chrome/.test(window.navigator.userAgent)) {
+        // alert( 'Please try the Google Chrome Browser when using the Web API in this Vue.js App !' );
+        // Setting the GUI with the value returned from the Web API
+        document.getElementById("nocrome").innerHTML =
+          "<br /><b>Please try the Google Chrome Browser when using this Vue.js App !</b>";
+      }
+    </script>
   </head>
+
   <body>
     <noscript>
       This is your fallback content in case JavaScript fails to load.
@@ -75,6 +107,5 @@ req.send();
     <!-- Todo: only include in production -->
     <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
     <!-- built files will be auto injected -->
- 
   </body>
-  </html>
+</html>
