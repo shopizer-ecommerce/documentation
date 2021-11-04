@@ -43,7 +43,7 @@
 
 Users belong to MERCHANT_STORE. Users are assigned to groups having predefined sets of permissions.
 
-![User database tables](/static/img/documentation/users.png "User database tables")
+![User database tables](/documentation/static/img/documentation/users.png "User database tables")
 
 ### Rest api Examples
 

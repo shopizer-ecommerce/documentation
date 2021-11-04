@@ -6,7 +6,7 @@ These instructions are for running legacy Shopizer with JSP frontends as well as
 
 ### Build Shopizer
 
-![Java Backend](/static/img/documentation/java-small.jpg "Java API AKA backend")
+![Java Backend](/documentation/static/img/documentation/java-small.jpg "Java API AKA backend")
 
 From a terminal or console
   
@@ -43,7 +43,7 @@ Another alternative to run Shopizer locally is to run the application from lates
 
 ### Build Shopizer store React app
 
-![React App](/static/img/documentation/react-small.png "React shop")
+![React App](/documentation/static/img/documentation/react-small.png "React shop")
 
 This is a showcase React app consuming Shopizer services endpoints
 

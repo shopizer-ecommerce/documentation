@@ -7,7 +7,7 @@ This simple infrastructure allows running Shopizer on a simple AWS LightSail vir
 > 4GB - 2vCPU - 80GB
 
 
-![AWS LightSail VM diagram](/static/img/documentation/Shopizer-TLS.png "Shopizer running on simple AWS LightSail VM")
+![AWS LightSail VM diagram](/documentation/static/img/documentation/Shopizer-TLS.png "Shopizer running on simple AWS LightSail VM")
 
 ## Requirements
 - AWS Account

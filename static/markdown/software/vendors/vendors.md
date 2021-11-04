@@ -1,6 +1,6 @@
 This section explains possible possible configurations for MerchantStore in order to use the app as a single store application, multiple store application (marketplace) or retailer - store application.
 
-![Merchant stores diagram](/static/img/documentation/rest/merchants-Single-Multiple.jpg "Single and multiple merchants")
+![Merchant stores diagram](/documentation/static/img/documentation/rest/merchants-Single-Multiple.jpg "Single and multiple merchants")
 
 #### Single store
 
@@ -20,7 +20,7 @@ use cases.
 
 A MERCHANT can be support one to multiple languages
 
-![Merchant database table](/static/img/documentation/merchant-store.png "Merchant database table")
+![Merchant database table](/documentation/static/img/documentation/merchant-store.png "Merchant database table")
 
 
 ### Rest api Examples

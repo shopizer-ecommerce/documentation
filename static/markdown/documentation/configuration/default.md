@@ -38,11 +38,11 @@ Enabling 3 apis
    - Geocoding API
    - Places API
 
-![Google APIs diagram](/static/img/documentation/google-api.png "Enable Google APIs")
+![Google APIs diagram](/documentation/static/img/documentation/google-api.png "Enable Google APIs")
 
 Then once apis are enabled keep keys aside to configure Shopizer
 
-![Google keys diagram](/static/img/documentation/keys.png "Keep keys aside")
+![Google keys diagram](/documentation/static/img/documentation/keys.png "Keep keys aside")
 
 
 - **Google Places API**

@@ -20,7 +20,7 @@ Technology stack is built on Java (java 8 0 java 11), Spring Boot (Core, Securit
 
 ## Shopizer high level architecture
 
-![Shopizer high level architecture](/static/img/documentation/shopizer-architecture.png "Shopizer high level architecture")
+![Shopizer high level architecture](/documentation/static/img/documentation/shopizer-architecture.png "Shopizer high level architecture")
 
 Shopizer is a platform aiming to provide services, tools and connectors for building your own commerce cloud or on premise commerce application. 
 
@@ -34,16 +34,16 @@ A REST api exposes all commerce functionality (B2C, B2B, C2C, Multi-Stores) as w
 
 |  |  |
 |----------------|:---------:|
-| **Spring Boot** Shopizer is based on [Spring Boot](https://spring.io/projects/spring-boot) which makes it easy to create stand-alone, production-grade Applications that you can "just run". | ![SpringBoot](/static/img/springboot.png) |
-| **Spring Security** Shopizer is also based on [Spring Security](https://projects.spring.io/spring-security/) which is a framework that focuses on providing both authentication and authorization to Java applications. | ![SpringSecurity](/static/img/spring-security.png) |
-| **Spring Data JPA** Data access is implemented using [Spring Data JPA](https://spring.io/projects/spring-data-jpa) which makes easy data operations in a Java application. | ![Spring Data JPA](/static/img/spring-data.png) |
-| **Elastic search** Search functionality is built on Elastic Search a tool for searching, analyzing, and visualizing commerce data data [Elastic Search](https://www.elastic.co) which makes easy data operations in a Java application. | ![Spring Data JPA](/static/img/elastic.png) |
+| **Spring Boot** Shopizer is based on [Spring Boot](https://spring.io/projects/spring-boot) which makes it easy to create stand-alone, production-grade Applications that you can "just run". | ![SpringBoot](/documentation/static/img/springboot.png) |
+| **Spring Security** Shopizer is also based on [Spring Security](https://projects.spring.io/spring-security/) which is a framework that focuses on providing both authentication and authorization to Java applications. | ![SpringSecurity](/documentation/static/img/spring-security.png) |
+| **Spring Data JPA** Data access is implemented using [Spring Data JPA](https://spring.io/projects/spring-data-jpa) which makes easy data operations in a Java application. | ![Spring Data JPA](/documentation/static/img/spring-data.png) |
+| **Elastic search** Search functionality is built on Elastic Search a tool for searching, analyzing, and visualizing commerce data data [Elastic Search](https://www.elastic.co) which makes easy data operations in a Java application. | ![Spring Data JPA](/documentation/static/img/elastic.png) |
 
 
 ## Shopizer components
 
 
-![Shopizer components](/static/img/documentation/shopizer-components.jpg "Shopizer components")
+![Shopizer components](/documentation/static/img/documentation/shopizer-components.jpg "Shopizer components")
 
 The Component Model describes the entire hierarchy of components in terms of their responsibilities, their interfaces, their (static) relationships, and the way they collaborate to deliver required functionality.
 
