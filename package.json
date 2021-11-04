@@ -6,7 +6,7 @@
   "homepage": "",
   "private": false,
   "scripts": {
-    "dev": "node config/dev-server.js",
+    "dev": "node config/dev-server.js --progress",
     "build-search": "node build/build.search.js",
     "build": "node config/build.js; node config/build.search.js;",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
@@ -57,12 +57,13 @@
     "babel-register": "^6.26.0",
     "chalk": "^4.1.2",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.2.1",
+    "copy-webpack-plugin": "^6.4.1",
     "cross-env": "^7.0.2",
     "css-loader": "^6.2.0",
     "css-minimizer-webpack-plugin": "^1.1.5",
     "express": "^4.17.1",
     "html-webpack-plugin": "^5.0.0-alpha.7",
+    "http-proxy-middleware": "^2.0.1",
     "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^1.6.2",
     "ora": "^6.0.1",
@@ -86,7 +87,8 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-hot-middleware": "^2.25.1",
     "webpack-merge": "^5.8.0",
-    "webpack-shell-plugin-next": "^2.2.2"
+    "webpack-shell-plugin-next": "^2.2.2",
+    "workbox-webpack-plugin": "^6.3.0"
   },
   "engines": {
     "node": ">= 4.0.0",

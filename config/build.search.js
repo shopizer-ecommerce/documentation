@@ -73,19 +73,7 @@ const traversTree = (pages, parent) => {
 
 traversTree(pages)
   .then((PAGE_CONTENTS) => {
-    // console.log("page contents",PAGE_CONTENTS);
-    // fs.mkdir("../dist","static",{recursive: true},() => {
-      // console.log('complete')
-    // });
-    // fs.open("content.json","w+",(err,test) => {
 
-    //   if (err) throw err
-    //   console.log('complete',test)
-    // })
-    fs.mkdir(path.join(config.build.assetsRoot,'static'),
-    () => {
-      console.log('complete')
-    });
     fs.writeFile(
       path.join(config.build.assetsRoot, 'static/content.json'),
       JSON.stringify(PAGE_CONTENTS),
