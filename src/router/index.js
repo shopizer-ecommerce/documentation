@@ -5,5 +5,5 @@ import ConfigManager from '../services/configManager'
 Vue.use(Router)
 
 export default new Router({
-  routes: ConfigManager.getRoutingConfig()
+  routes: ConfigManager.getRoutingConfig(),
 })

@@ -1,23 +1,23 @@
 import pageConfig from '../pageConfig.json'
 import axios from 'axios'
 
-const DefaultPageRenderer = () => import('@/views/DefaultPageRenderer')
+const DefaultPageRenderer = () => import('../views/DefaultPageRenderer')
 var metaMap = {}
 
 /**
  * processElement - recursively walk through a given node and enrich it with some additional
  * properties (to bring vue-tree-navigation and VueRouter in sync)
  */
-function processElement (node, parent) {
+function processElement(node, parent) {
   // add fully qualified path and reference to component
   node.path = node.route
   if (!parent) node.breadCrumb = []
   else node.breadCrumb = JSON.parse(JSON.stringify(parent.breadCrumb))
-  let parentPath = (parent != null) ? (parent.path + node.route) : '/'
+  let parentPath = parent != null ? parent.path + node.route : '/'
 
   node.breadCrumb.push({
     name: node.name,
-    path: parentPath
+    path: parentPath,
   })
 
   node.component = DefaultPageRenderer
@@ -28,25 +28,23 @@ function processElement (node, parent) {
   if (node.children) {
     for (var i in node.children) {
       let child = node.children[i]
-      tiles.push(
-        {
-          name: child.name,
-          description: child.description,
-          path: node.path + child.route,
-          icon: child.icon,
-          iconContext: node.iconContext,
-          bgColor: child.bgColor,
-          owner: child.owner,
-          topics: child.topics
-        }
-      )
+      tiles.push({
+        name: child.name,
+        description: child.description,
+        path: node.path + child.route,
+        icon: child.icon,
+        iconContext: node.iconContext,
+        bgColor: child.bgColor,
+        owner: child.owner,
+        topics: child.topics,
+      })
       processElement(child, node)
     }
   }
 
   // construct meta object we give to DefaultPageRenderer as part of the current route
   node.meta = {
-    tiles: (tiles.length > 0) ? tiles : null,
+    tiles: tiles.length > 0 ? tiles : null,
     name: node.name,
     description: node.description,
     markdown: node.markdown,
@@ -55,7 +53,7 @@ function processElement (node, parent) {
     bgColor: node.bgColor,
     owner: node.owner,
     topics: node.topics,
-    breadCrumb: node.breadCrumb
+    breadCrumb: node.breadCrumb,
   }
 
   // store the meta data in our metaMap
@@ -65,7 +63,7 @@ function processElement (node, parent) {
 /**
  * generateRoutingConfig - generates the routing for VueRouter out of the pageConfig.pages
  */
-function generateRoutingConfig (baseConfig) {
+function generateRoutingConfig(baseConfig) {
   let pages = JSON.parse(JSON.stringify(baseConfig.pages))
 
   for (let i in pages) {
@@ -74,12 +72,10 @@ function generateRoutingConfig (baseConfig) {
   }
 
   // configure the default landing page
-  pages.push(
-    {
-      path: '/',
-      redirect: baseConfig.landingPage
-    }
-  )
+  pages.push({
+    path: '/',
+    redirect: baseConfig.landingPage,
+  })
   return pages
 }
 
@@ -122,16 +118,19 @@ export default {
   getStatus: () => {
     return new Promise((resolve, reject) => {
       const pathName = window.location.pathname
-      const path = `${pathName.substring(0, pathName.length - 1)}/static/content.json`
+      const path = `${pathName.substring(
+        0,
+        pathName.length - 1
+      )}/src/pageConfig.json`
 
-      axios.get(path)
-        .then(response => {
+      axios
+        .get(path)
+        .then((response) => {
           resolve(response.data)
         })
         .catch((error) => {
           return reject(error)
         })
     })
-  }
-
+  },
 }

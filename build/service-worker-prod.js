@@ -1,5 +1,5 @@
-(function() {
-  'use strict';
+;(function () {
+  'use strict'
 
   // THR: disabled init of services workers to dig into caching issues
 
@@ -54,4 +54,5 @@
   //       });
   //     }
   // });
-})();
+
+})()

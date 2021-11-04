@@ -1,18 +1,18 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@4.1.0
+  node: circleci/node@4.7.0
 
 jobs:
   #build source
   build:
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:16.11.1
     steps:
       - checkout
       - run:
           name: update-npm
-          command: 'sudo npm install -g npm@5'
+          command: 'sudo npm install -g npm@8'
       - run: node --version
       - run: npm version
       - run: npm install
@@ -25,7 +25,7 @@ jobs:
   #destination
   prepare:
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:16.11.1
     steps:
       - attach_workspace:
          at: .

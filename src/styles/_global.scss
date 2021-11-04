@@ -27,6 +27,10 @@ main {
   padding: 0;
   margin: 1px auto;
   overflow-y: scroll;
+  overflow-x: hidden;
+  @media (min-width:1200px) {
+    max-width: inherit;
+  }
 }
 
 .main__nav {

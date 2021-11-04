@@ -1,26 +1,26 @@
 'use strict'
 
-require('./check-versions')()
+// require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
 
-const ora = require('ora')
+// const ora = require('ora')
 const rm = require('rimraf')
 const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
-const config = require('../config')
-const webpackConfig = require('./webpack.prod.conf')
+const config = require('./index.js')
+const webpackConfig = require('./webpack.prod')
 
-const spinner = ora('building for production...')
-spinner.start()
-
+// const spinner = ora('building for production...')
+// spinner.start()
+// console.log("__dirname",__dirname)
 rm(
   path.join(config.build.assetsRoot, config.build.assetsSubDirectory),
   (err) => {
     if (err) throw err
     webpack(webpackConfig, function (err, stats) {
-      spinner.stop()
+      // spinner.stop()
       if (err) throw err
       process.stdout.write(
         stats.toString({

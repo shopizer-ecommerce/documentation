@@ -1,40 +1,70 @@
 <template>
   <div class="container" @scroll="handleScroll">
     <Breadcrumb></Breadcrumb>
-    <section class="banner" 
-      :class="{ active: isActive }" 
+    <section
+      class="banner"
+      :class="{ active: isActive }"
       v-if="pageConfig && !pageConfig.tiles"
       :data-name="pageConfig.name"
     >
       <h2 class="banner__title">{{ pageConfig.name }}</h2>
       <h4 class="banner__text">{{ pageConfig.description }}</h4>
       <p class="banner__timestamp">{{ lastModified }}</p>
-
     </section>
 
     <section class="topics" v-if="topics">
-      <span tabindex="0" v-for="(topic, idx) in topics" :key="idx" class="tag" @keyup.enter="searchTopic(topic)" @click="searchTopic(topic)">{{topic}}</span>
+      <span
+        tabindex="0"
+        v-for="(topic, idx) in topics"
+        :key="idx"
+        class="tag"
+        @keyup.enter="searchTopic(topic)"
+        @click="searchTopic(topic)"
+        >{{ topic }}</span
+      >
     </section>
 
     <vue-markdown class="content" :source="markdown"></vue-markdown>
 
     <ul class="cards" v-if="pageConfig.tiles">
-      <li class="card"
+      <li
+        class="card"
         v-for="(tile, key) in pageConfig.tiles"
         :key="key"
         :style="{ backgroundColor: tile.bgColor }"
       >
         <router-link :to="tile.path">
-          <font-awesome-icon class="card__icon" size="2x" :icon="['fas', tile.icon]" v-if="tile.icon !=='docker' && tile.icon !=='aws' && tile.icon !=='google' && tile.icon !=='github' && tile.icon !=='youtube'"/>
-          <font-awesome-icon class="card__icon" size="2x" :icon="['fab', tile.icon]" v-if="tile.icon ==='docker' || tile.icon ==='aws' || tile.icon ==='google' || tile.icon ==='github' || tile.icon ==='youtube'"/>
-          <h4 class="card__title">{{tile.name}}</h4>
-          <p class="card__text">{{tile.description}}</p>
+          <font-awesome-icon
+            class="card__icon"
+            size="2x"
+            :icon="['fas', tile.icon]"
+            v-if="
+              tile.icon !== 'docker' &&
+              tile.icon !== 'aws' &&
+              tile.icon !== 'google' &&
+              tile.icon !== 'github' &&
+              tile.icon !== 'youtube'
+            "
+          />
+          <font-awesome-icon
+            class="card__icon"
+            size="2x"
+            :icon="['fab', tile.icon]"
+            v-if="
+              tile.icon === 'docker' ||
+              tile.icon === 'aws' ||
+              tile.icon === 'google' ||
+              tile.icon === 'github' ||
+              tile.icon === 'youtube'
+            "
+          />
+          <h4 class="card__title">{{ tile.name }}</h4>
+          <p class="card__text">{{ tile.description }}</p>
         </router-link>
       </li>
     </ul>
   </div>
 </template>
-
 
 <script>
 import ConfigManager from '../services/configManager'
@@ -45,9 +75,9 @@ import axios from 'axios'
 export default {
   components: {
     VueMarkdown,
-    Breadcrumb
+    Breadcrumb,
   },
-  data () {
+  data() {
     return {
       markdown: '',
       lastModified: '',
@@ -60,10 +90,10 @@ export default {
       comment: '',
       likes: 0,
       dislikes: 0,
-      topics: null
+      topics: null,
     }
   },
-  mounted () {
+  mounted() {
     this.initialize(this.$router.currentRoute.path)
     setTimeout(() => {
       this.scrollTo(this.$route.hash)
@@ -71,8 +101,7 @@ export default {
 
     this.container = document.querySelector('main > .container')
     if (this.container) {
-      this.container.addEventListener('scroll', (event) => {
-      })
+      this.container.addEventListener('scroll', (event) => {})
     }
     console.log('this.container', this.container)
     setTimeout(() => {
@@ -87,7 +116,7 @@ export default {
     }, 150)
   },
   watch: {
-    '$route' (to, from) {
+    $route(to, from) {
       if (to.path !== from.path) {
         this.pageConfig = to.meta
         this.initialize()
@@ -104,37 +133,41 @@ export default {
           }
         }, 10)
       }
-    }
+    },
   },
   methods: {
-    searchTopic (topic) {
+    searchTopic(topic) {
       let filter = `topic:${topic}`
       let query = Object.assign({}, this.$route.query, { search: filter })
       this.$router.push({ query })
     },
-    onLoadIFrame (event) {
+    onLoadIFrame(event) {
       console.log('onload iframe', event)
     },
-    getLikes () {
+    getLikes() {
       let route = this.$router.currentRoute.path
-      axios.post(`https://playbook-api-dev.mybluemix.net/likes`, {
-        route
-      }).then(response => {
-        this.likes = response.data.likes
-      })
+      axios
+        .post(`https://playbook-api-dev.mybluemix.net/likes`, {
+          route,
+        })
+        .then((response) => {
+          this.likes = response.data.likes
+        })
     },
-    getDislikes () {
+    getDislikes() {
       let route = this.$router.currentRoute.path
-      axios.post(`https://playbook-api-dev.mybluemix.net/dislikes`, {
-        route
-      }).then(response => {
-        this.dislikes = response.data.dislikes
-      })
+      axios
+        .post(`https://playbook-api-dev.mybluemix.net/dislikes`, {
+          route,
+        })
+        .then((response) => {
+          this.dislikes = response.data.dislikes
+        })
     },
     /**
      * initialize - called whenever the DefaultPageRenderer needs to re-initialize to render a specific page
      */
-    initialize (path) {
+    initialize(path) {
       this.topics = null
       if (!this.pageConfig.name) {
         let currentPath = this.$router.currentRoute.path
@@ -149,27 +182,29 @@ export default {
       this.markdown = ''
       if (this.pageConfig.markdown !== undefined) {
         const pathName = window.location.pathname
-        const path = `${pathName.substring(0, pathName.length - 1)}${this.pageConfig.markdown}`
+        const path = `${pathName.substring(0, pathName.length - 1)}${
+          this.pageConfig.markdown
+        }`
         this.topics = this.pageConfig.topics
-        var config = {headers: {'Cache-Control': 'no-cache'}}
-        axios.get(path, config).then(response => {
+        var config = { headers: { 'Cache-Control': 'no-cache' } }
+        axios.get(path, config).then((response) => {
           this.lastModified = response.headers['last-modified']
           console.log(this.lastModified)
           this.markdown = response.data
         })
       }
     },
-    routeTo (pRouteTo) {
+    routeTo(pRouteTo) {
       console.log('expects me to route to ', pRouteTo)
     },
-    handleScroll (event) {
+    handleScroll(event) {
       if (event.target.scrollTop >= 155) {
         this.isActive = true
       } else {
         this.isActive = false
       }
     },
-    scrollTo (hash) {
+    scrollTo(hash) {
       if (hash) {
         let target = document.querySelector(`.content ${hash.toLowerCase()}`)
         if (target) {
@@ -180,8 +215,8 @@ export default {
         document.querySelector(`main > .container`).scrollTo(0, 0)
         this.initialScroll = true
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
