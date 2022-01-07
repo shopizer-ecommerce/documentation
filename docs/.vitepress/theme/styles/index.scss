@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter.ttf');
+}
+.container {
+  max-width: 100%;
+}
+
+@import 'variables';
+@import 'scaffolding';

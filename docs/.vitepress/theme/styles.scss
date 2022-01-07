@@ -1,0 +1,108 @@
+/*
+    Theme Name: playbook PLAYBOOK
+    Description: Website to share development, design and project information
+    Author: Kai Wedekind
+    Author URI: https://kaiwedekind.com
+    Email: kai.wedekind@de.ibm.com
+    Tags: Best Practices, Website
+*/
+:root { 
+    --c-brand: #646cff;
+    --c-brand-light: #747bff;
+    --c-divider-light: rgba(60, 60, 67, 0.12);
+    --c-divider-dark: rgba(84, 84, 88, 0.48);
+
+    .theme {
+        display: flex;
+        height:100%;
+    }
+    .page {
+        margin-left: 0px;
+        padding-top: 5rem;
+    }
+    .next-and-prev-link {
+        padding-bottom: 1rem;
+        padding-top: 1rem;    
+        & > .container {
+            padding-bottom: 1rem;
+            border: 1px solid lightblue;
+        }
+    }
+
+    .sidebar {
+        position: relative;
+        height: auto;
+        padding-bottom: 4rem;
+        padding-top: 1rem;
+        margin-top: 1.5rem;
+
+        & > ul.sidebar-links {
+            color: #646cff;
+            & > li.sidebar-link {
+                height: 50px;
+                transition: height 1s;
+                & > ul.sidebar-links {
+                    visibility: hidden;
+                }         
+            }
+            & > li:hover,
+                li:focus {
+                color: #747bff;
+                height: auto;
+                transition: height 1s;
+                cursor: pointer;
+                
+                & > ul.sidebar-links {
+                    transition: height 2s;
+                    height: 100%;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    .container {
+        max-width: 100%;
+    }
+    img.logo {
+        height: 3rem;
+    }
+    a.nav-bar-title {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    header.nav-bar {
+            height: 5rem;
+            background: url(/assets/banner_bg.jpg);
+
+            & > div.sidebar-button {
+                top: 1rem;
+                color: white;
+            }
+        }
+        
+    @media (max-width: 720px) {
+        header.nav-bar {
+                & a > {
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        .sidebar {
+            position: absolute;
+        }    
+        }    
+}
+
+@import './styles/reset.scss';
+
+@import './styles/markdown.scss';
+
+@import './styles/fonts.scss';
+
+@import './styles/colors.scss';
+
+@import './styles/global.scss';
+
+@import './styles/components.scss';
