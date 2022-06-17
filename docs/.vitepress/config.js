@@ -1,9 +1,9 @@
 module.exports = {
-  title: 'Shopizer Technical Documentation',
-  description: 'Just playing around.',
+  title: 'Shopizer',
+  description: 'Technical documentation for Shopizer e-commerce headless',
   base:"/",
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/shopizer-cart.png' }]
+    ['link', { rel: 'icon', type: 'image/png', href: '/fav.png' }]
   ],
 
   themeConfig: {
@@ -22,7 +22,7 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
     title: 'shopizer',
-    logo: '/shopizer-cart.png',
+    logo: '/ID.jpg',
     navbar: true,
     sidebar: {
       '/': getMainSidebar(),
@@ -34,7 +34,7 @@ function getMainSidebar() {
   return [
     {
       text: 'Getting started',
-      children: [
+      items: [
         {
           text: 'What is Shopizer',
           link: '/whatisshopizer/default',
@@ -53,7 +53,7 @@ function getMainSidebar() {
     },
     {
       text: 'Shopizer Configuration',
-      children: [
+      items: [
         {
           text: 'Configuration',
           link: '/documentation/configuration/default',
@@ -77,7 +77,7 @@ function getMainSidebar() {
     {
       text: 'Commerce software',
       collapsable: false,
-      children: [
+      items: [
         { text: 'Administration of users', link: '/software/users/users' },
         {
           text: 'Merchants and stores administration',
@@ -116,7 +116,7 @@ function getMainSidebar() {
         },
         {
           text: 'Rules system',
-          children: [
+          items: [
             {
               text: 'What are modules',
               link: '/markdown/notavailable',
@@ -138,7 +138,7 @@ function getMainSidebar() {
     },
     {
       text: 'Database schema',
-      children: [
+      items: [
         {
           text: 'Country and Zones reference data',
           link: '/schema/country/default',
@@ -148,7 +148,7 @@ function getMainSidebar() {
     },
     {
       text: 'REST api',
-      children: [
+      items: [
         {
           text: 'Swagger documentation',
           link: '/notavailable',
@@ -168,7 +168,7 @@ function getMainSidebar() {
     },
     {
       text: 'Shopizer security',
-      children: [
+      items: [
         {
           text: 'Admin authentication',
           link: '/markdown/notavailable',
@@ -188,7 +188,7 @@ function getMainSidebar() {
     },
     {
       text: 'Shopizer metrics',
-      children: [
+      items: [
         {
           text: 'Configure analytics',
           link: '/markdown/notavailable',
@@ -203,7 +203,7 @@ function getMainSidebar() {
     },
     {
       text: 'Monolith deploy',
-      children: [
+      items: [
         {
           text: 'Deploy Shopizer on premise',
           link: '/markdown/notavailable',
@@ -217,7 +217,7 @@ function getMainSidebar() {
         {
           text: 'Deploy Shopizer on various clouds',
           collapsable: false,
-          children: [
+          items: [
             {
               text: 'Catalog service',
               link: '/markdown/notavailable',
@@ -240,7 +240,7 @@ function getMainSidebar() {
     },
     {
       text: 'Microservices deploy',
-      children: [
+      items: [
         {
           text: 'Catalog service',
           link: '/markdown/notavailable',

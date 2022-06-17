@@ -1,30 +1,18 @@
 {
   "name": "shopizer-documentation",
-  "version": "1.0.0",
-  "description": "this is the documentation for the shopizer app",
+  "version": "3.2.0",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
-    "test": "test"
+    "docs:serve": "vitepress serve docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IoannisLafiotis/vitepress-demo.git"
-  },
-  "keywords": [
-    "shopizer"
-  ],
-  "author": "Juan Spada",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/IoannisLafiotis/vitepress-demo/issues"
-  },
-  "homepage": "https://github.com/IoannisLafiotis/vitepress-demo",
+  "repository": "git@github.com:shopizer-ecommerce/documentation.git",
+  "author": "shopizerecomm <admin@shopizer.com>",
+  "license": "Apache 2",
   "devDependencies": {
-    "sass": "^1.43.4",
-    "stylus": "^0.55.0",
-    "vitepress": "^0.20.1"
+    "sass": "^1.52.3",
+    "vitepress": "^1.0.0-alpha.2",
+    "vue": "^3.2.37"
   }
 }
