@@ -12,7 +12,9 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
+      - run: ls -lR 
       - run: npm i
+      - run: ls -lR 
       - run: yarn docs:build
       #- run:
       #    name: update-npm
