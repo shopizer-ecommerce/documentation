@@ -43,7 +43,7 @@ jobs:
       - aws-cli/setup:
           profile-name: circleci
       #TODO bucket in environment
-      - run: aws s3 sync dist s3://shopizer-documentation/ --region ca-central-1 --delete --profile circleci
+      - run: aws s3 sync ./vitepress/dist s3://shopizer-documentation/ --region ca-central-1 --delete --profile circleci
       - slack/status:
           fail_only: false
           webhook: $SLACK_SHOP_WEBHOOK
