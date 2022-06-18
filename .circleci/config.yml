@@ -9,21 +9,23 @@ jobs:
   #build source
   build:
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@5'
-      - run: node --version
-      - run: npm version
-      - run: npm install
-      - run: npm run docs:build
+      - run: npm i
+      - run: yarn docs:build
+      #- run:
+      #    name: update-npm
+      #    command: 'sudo npm install -g npm@5'
+      #- run: node --version
+      #- run: npm version
+      #- run: npm install
+      #- run: npm run docs:build
       - run: ls -lR 
       - persist_to_workspace:
           root: .
           paths:
-            - dist/*
+            - ./docs/.vitepress/dist/*
 
   deploy:
     working_directory: ~/project
@@ -38,7 +40,7 @@ jobs:
       - aws-cli/setup:
           profile-name: circleci
       #TODO bucket in environment
-      - run: aws s3 sync build s3://perfectogaz-shop/ --region ca-central-1 --delete --profile circleci
+      - run: aws s3 sync build s3://shopizer-documentation/ --region ca-central-1 --delete --profile circleci
       - slack/status:
           fail_only: false
           webhook: $SLACK_SHOP_WEBHOOK
@@ -102,6 +104,6 @@ workflows:
       - deploy:
           requires:
             - build
-      #- prepare:
-      #    requires:
-      #      - build
+      - prepare:
+          requires:
+            - build
