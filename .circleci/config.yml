@@ -96,7 +96,7 @@ jobs:
 
 workflows:
   version: 2
-  build_and_publish:
+  build_and_deploy:
     jobs:
       - build:
           filters:
@@ -104,8 +104,5 @@ workflows:
                 only:
                   - vitepress
       - deploy:
-          requires:
-            - build
-      - prepare:
           requires:
             - build
