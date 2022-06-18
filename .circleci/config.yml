@@ -27,7 +27,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - ./docs/.vitepress/dist/*
+            - docs/.vitepress/dist/*
 
   deploy:
     working_directory: ~/project
@@ -38,7 +38,7 @@ jobs:
        # start proprietary DB using private Docker image
        # with credentials stored in the UI
       - run: |
-          ls -al
+          ls -lR
       - aws-cli/setup:
           profile-name: circleci
       #TODO bucket in environment
