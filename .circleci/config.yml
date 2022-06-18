@@ -25,9 +25,9 @@ jobs:
       #- run: npm run docs:build
       - run: ls -lR 
       - persist_to_workspace:
-          root: .
+          root: docs
           paths:
-            - docs/.vitepress/dist/*
+            - .vitepress
 
   deploy:
     working_directory: ~/project
