@@ -4,19 +4,20 @@ title: Docs with VitePress
 
 # Shopizer
 
-## The headless e-commerce open source software based on Java 
+## Open source Java headless e-commerce
 
-# News
+### News
 
-We update everyday our Angular dashboard
 
-We have a shop react app so you can test the software
+- We update everyday our Angular dashboard
 
-We removed the traditional JSP from our backend in the 3.0 release 
+- We have a shop react app so you can test the software
 
-We began decoupling our system to microservices as well as 
+- We removed the traditional JSP from our backend in the 3.0 release 
 
-We taking on new projects every semester
+- We began decoupling our system to microservices as well as 
+
+- We taking on new projects every semester
 
 
 

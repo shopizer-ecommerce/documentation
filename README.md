@@ -7,4 +7,7 @@ nvm use v16.13.0
 npm i
 
 ## Run locally
-npm docs:dev
+npm run docs:dev
+
+## Build distribution (dist)
+npm run docs:build

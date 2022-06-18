@@ -22,7 +22,7 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
     title: 'shopizer',
-    logo: '/ID.jpg',
+    logo: '/images/ID.jpg',
     navbar: true,
     sidebar: {
       '/': getMainSidebar(),
@@ -30,25 +30,14 @@ module.exports = {
   },
 };
 
+
 function getMainSidebar() {
   return [
     {
       text: 'Getting started',
       items: [
-        {
-          text: 'What is Shopizer',
-          link: '/whatisshopizer/default',
-          collapsable: false,
-        },
-        { text: 'Shopizer architecture', link: '/architecture/Current' },
-        { text: 'Beginning with Shopizer', link: '/init/Current' },
-        { text: 'Build and run locally', link: '/buildandrunlocally/Current' },
-        { text: 'Technical documentation', link: '/documentation/default' },
-        { text: 'Video tutorials', link: '/documentation/videotutorials' },
-        { text: 'Run Shopizer from Docker image', link: '/docker/default' },
-        { text: 'Run using Docker Compose', link: '/docker/compose' },
-        { text: 'Run in the cloud', link: '/cloud/default' },
-        { text: 'Contribute to Shopizer', link: '/contribute/default' },
+        { text: 'What is Shopizer', link: '/what-is-shopizer' },
+        { text: 'Build and run Shopizer', link: '/build-and-run' }
       ],
     },
     {

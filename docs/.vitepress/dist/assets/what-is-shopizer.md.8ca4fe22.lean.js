@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as r,a as d}from"./app.8d86ba0f.js";const S=JSON.parse('{"title":"What is Shopizer","description":"","frontmatter":{},"headers":[],"relativePath":"what-is-shopizer.md"}'),o={name:"what-is-shopizer.md"},i=d("",9),a=[i];function s(n,l,p,c,m,u){return r(),e("div",null,a)}var f=t(o,[["render",s]]);export{S as __pageData,f as default};
