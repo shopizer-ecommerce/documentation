@@ -28,7 +28,7 @@ jobs:
       - persist_to_workspace:
           root: docs
           paths:
-            - vitepress
+            - vitepress/dist/*
 
   deploy:
     working_directory: ~/project
