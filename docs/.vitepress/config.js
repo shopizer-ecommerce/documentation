@@ -41,6 +41,17 @@ function getMainSidebar() {
       ],
     },
     {
+      text: 'Architecture',
+      items: [
+        { text: 'Summary', link: '/architecture/index' },
+        { text: 'Components', link: '/architecture/index' },
+        { text: 'Services', link: '/architecture/index' },
+        { text: 'Repository', link: '/architecture/index' },
+        { text: 'Starters', link: '/architecture/index' },
+        { text: 'Events', link: '/architecture/index' }
+      ],
+    },
+    {
       text: 'Shopizer Configuration',
       items: [
         {

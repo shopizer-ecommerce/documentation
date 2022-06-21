@@ -1,0 +1,6 @@
+---
+title: Shopizer Architecture
+---
+
+# Architecture
+
