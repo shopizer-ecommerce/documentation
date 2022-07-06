@@ -65,13 +65,9 @@ function getMainSidebar() {
           collapsable: false,
         },
         {
-          text: 'Local configuration of ElasticSearch',
+          text: 'Local configuration of Search',
           link: '/documentation/search/cloud',
-        },
-        {
-          text: 'Elastic Cloud configuration',
-          link: '/documentation/search/search',
-        },
+        }
       ],
     },
     {
@@ -87,7 +83,7 @@ function getMainSidebar() {
         {
           text: 'Catalog management',
           link: '/markdown/notavailable',
-          collapsable: false,
+          collapsable: true,
         },
         {
           text: 'Shopping cart functions',
@@ -187,6 +183,16 @@ function getMainSidebar() {
       ],
     },
     {
+      text: 'Operations',
+      items: [
+        {
+          text: 'Hard reset user names',
+          link: '/operations/reset-password.md',
+          collapsable: false,
+        }
+      ],
+    },
+    {
       text: 'Shopizer metrics',
       items: [
         {
@@ -202,7 +208,7 @@ function getMainSidebar() {
       ],
     },
     {
-      text: 'Monolith deploy',
+      text: 'Deployment',
       items: [
         {
           text: 'Deploy Shopizer on premise',
@@ -239,7 +245,7 @@ function getMainSidebar() {
       ],
     },
     {
-      text: 'Microservices deploy',
+      text: 'Microservices',
       items: [
         {
           text: 'Catalog service',
