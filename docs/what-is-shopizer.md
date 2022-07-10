@@ -1,5 +1,7 @@
 # What is Shopizer
 
+![Shopizer Headless Commerce](/images/shopizer_resized_transparent.png "Shopizer headless commerce")
+
 Shopizer is enterprise open source e-commerce software for retailers who want flexibility, speed and control of their commerce platform. Shopizer is a software solution that gives organizations the ultimate flexibility to take an experience-first approach to commerce, with simple powerful APIs and built in stores models.
 
 Key technical benefits
@@ -12,7 +14,7 @@ Key technical benefits
   - Azure or Google Cloud Platform (GCP)
   - Run on premise servers
   - Run from Docker containers
-  - Run from any Java servlet containers
+  - Run from any Java servlet containers such as Tomcat
 
 
 Shopizer is a an application composed of a set of services written in Java that serves functionality needed to build entreprise e-commerce systems.
@@ -20,7 +22,7 @@ Shopizer is a an application composed of a set of services written in Java that 
 The software can be used out of the box as a complete ready to use web application including a few web stores templates you can choose from. Shopizer can also be used as a restful backend application for serving a whole set of commerce REST apis on which you can build your own tailored e-commerce front store.
 
 Shopizer e-commerce system provides the following functionality:
-  - Catalog management
+  - Catalog and products management
   - Shopping cart
   - Content management
   - Marketing components
@@ -32,7 +34,6 @@ Shopizer e-commerce system provides the following functionality:
   |Scope|Features|
 |--- |--- |
 |Software|Supports MySQL|
-|Software|Supports Oracle|
 ||Supports Postgresql|
 ||Supports MariaDB|
 ||Supports H2|
@@ -47,6 +48,7 @@ Shopizer e-commerce system provides the following functionality:
 ||Complex promotions (Based on JBoss Drools)|
 ||Category hierarchy|
 ||Product options|
+||Product variants|
 ||Custom product properties|
 ||B2C|
 ||B2B|
@@ -64,7 +66,7 @@ Shopizer e-commerce system provides the following functionality:
 ||Promotions based on shipping rules|
 ||Promotions based vatious property (quantity of items, customer...)|
 |REST API|Administration api|
-||Commerce api|
+||Products api|
 ||Customer api|
 ||Order api|
 ||Cart api|
@@ -72,7 +74,7 @@ Shopizer e-commerce system provides the following functionality:
 ||Payment api|
 ||User api|
 ||Search|
-|Search|Based on Elastic Search|
+|Search|Based on Elastic Search and Open Search|
 ||Search items|
 ||Search autocomplete|
 |Languages|Our language translator converts to multiple language|

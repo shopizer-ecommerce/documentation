@@ -1,3 +1,3 @@
 # Shopizer API Reference
 
-- [Products](./products)
+- [Products](./products/index.md)
