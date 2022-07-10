@@ -50,6 +50,7 @@ function getMainSidebar() {
         { text: 'Starters', link: '/architecture/index' },
         { text: 'Events', link: '/architecture/index' }
       ],
+      collapsable: true
     },
     {
       text: 'Shopizer Configuration',
@@ -143,26 +144,6 @@ function getMainSidebar() {
       ],
     },
     {
-      text: 'REST api',
-      items: [
-        {
-          text: 'Swagger documentation',
-          link: '/notavailable',
-          collapsable: false,
-        },
-        {
-          text: 'Creating new REST services',
-          link: '/notavailable',
-          collapsable: false,
-        },
-        {
-          text: 'Handling REST errors',
-          link: '/notavailable',
-          collapsable: false,
-        },
-      ],
-    },
-    {
       text: 'Shopizer security',
       items: [
         {
@@ -243,6 +224,22 @@ function getMainSidebar() {
           ],
         },
       ],
+    },
+    {
+      text: 'REST API Reference',
+
+      items: [
+        {
+          text: 'Products REST API',
+          link: '/api/products/index.md',
+          collapsable: false,
+        }, 
+        {
+          text: 'Shopizer Swagger Hub',
+          link: '/swagger',
+          collapsable: false,
+        },         
+      ]
     },
     {
       text: 'Microservices',
