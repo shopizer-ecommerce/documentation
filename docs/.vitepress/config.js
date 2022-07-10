@@ -7,6 +7,9 @@ module.exports = {
   ],
 
   themeConfig: {
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/shopizer-ecommerce' }
+    ],
     editLinks: true,
     algolia: {
       appId: 'FMFYCPWOUC',
@@ -35,6 +38,7 @@ function getMainSidebar() {
   return [
     {
       text: 'Getting started',
+      collapsable: true,
       items: [
         { text: 'What is Shopizer', link: '/what-is-shopizer' },
         { text: 'Run Shopizer docker containers', link: '/docker' },
@@ -48,7 +52,7 @@ function getMainSidebar() {
         {
           text: 'Products REST API',
           link: '/api/products/index.md',
-          collapsable: false,
+          collapsable: true,
         }        
       ]
     },

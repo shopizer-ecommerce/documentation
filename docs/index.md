@@ -4,6 +4,8 @@ title: Docs with VitePress
 
 # Shopizer
 
+![Shopizer Headless Commerce](/images/shopizer_resized_transparent.png "Shopizer headless commerce")
+
 ## Open source Java headless e-commerce
 
 ### News

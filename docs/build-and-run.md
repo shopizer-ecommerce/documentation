@@ -39,7 +39,7 @@ This will open Shopizer headless api. You can view all application interfaces av
 
 ### Build and run Shopizer Angular administration app
 
-![Angular App](/images/angular.png "Angular shop")
+![Angular App](/images/angular-small.png "Angular shop")
 
 Angular app consuming Shopizer administration services endpoints
 
