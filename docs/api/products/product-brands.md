@@ -137,7 +137,7 @@ GET
 
 **Url:**
 
-{{url}}/api/v1/manufacturer?count=25&page=0
+{{url}}/api/v1/manufacturers?count=25&page=0
 
 
 

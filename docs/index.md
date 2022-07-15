@@ -11,11 +11,11 @@ title: Docs with VitePress
 ### News
 
 
-- We update everyday our Angular dashboard
+- A Vue Storefront Shop App is on the way
 
 - We have a shop react app so you can test the software
 
-- We removed the traditional JSP from our backend in the 3.0 release 
+- Moving towards service based Headless commerce
 
 - We began decoupling our system to microservices as well as 
 

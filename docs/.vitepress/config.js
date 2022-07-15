@@ -46,6 +46,13 @@ function getMainSidebar() {
       ],
     },
     {
+      text: 'Architecture',
+      collapsable: true,
+      items: [
+        { text: 'Shopizer architecture', link: '/architecture/index' }
+      ],
+    },
+    {
       text: 'REST API Reference',
 
       items: [
