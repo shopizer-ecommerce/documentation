@@ -1,5 +1,5 @@
 ---
-title: Docs with VitePress
+title: Shopizer documentation
 ---
 
 # Shopizer

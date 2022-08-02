@@ -1,3 +1,7 @@
+---
+title: Shopizer product REST api documentation
+---
+
 # Product API Reference
 
 ## Product characteristics
@@ -21,9 +25,13 @@ Product definition is product metadata that defines core non variables elements 
 - [Product images](./product-images)
 
 
-## Product attributes
+## Product properties (attributes)
 
-## Product variants
+Properties (attributes) adds extension to the product core attributes by allowing the creation of custom properties (attributes).
+
+- [Product custom properties](./product-properties)
+
+## Product variants (options)
 
 ## Product instances
 
@@ -32,3 +40,12 @@ Product definition is product metadata that defines core non variables elements 
 ## List products
 
 ## Search products
+
+
+
+
+## Swagger documentations
+
+All apis are described on Swaggerhub Shopizer repository
+
+[Shopize Swagger Documentation](https://groups.google.com/forum/#!forum/shopizer)https://app.swaggerhub.com/apis-docs/shopizer/shopizer-rest-api/3.0.1

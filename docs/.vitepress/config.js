@@ -63,6 +63,20 @@ function getMainSidebar() {
         }        
       ]
     },
+    {
+      text: 'Configurations',
+      collapsable: true,
+      items: [
+        { text: 'Database configuration', link: '/configuration/database' }
+      ],
+    },
+    {
+      text: 'Model',
+      collapsable: true,
+      items: [
+        { text: 'User', link: '/model/user' }
+      ],
+    },
   ]
 
 }
