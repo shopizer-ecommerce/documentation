@@ -1,5 +1,6 @@
 ---
 title: Shopizer documentation
+footer: Apache Licensed | Copyright © 2019-present Shopizer
 ---
 
 # Shopizer

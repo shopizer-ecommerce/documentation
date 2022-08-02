@@ -12,17 +12,9 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-      - run: ls -lR 
       - run: npm i
-      - run: ls -lR 
       - run: yarn docs:build
-      #- run:
-      #    name: update-npm
-      #    command: 'sudo npm install -g npm@5'
-      #- run: node --version
-      #- run: npm version
-      #- run: npm install
-      #- run: npm run docs:build
+
       - run: mv docs/.vitepress docs/vitepress
       - run: cp -pr  docs/images docs/vitepress/dist
       - run: ls -lR 
@@ -31,7 +23,7 @@ jobs:
           paths:
             - vitepress/*
 
-  deploy:
+  s3:
     working_directory: ~/project
     executor: aws-cli/default
     steps:
@@ -48,10 +40,11 @@ jobs:
       - slack/status:
           fail_only: false
           webhook: $SLACK_WEBHOOK
+
   #destination
-  prepare:
+  gh:
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node
     steps:
       - attach_workspace:
          at: .
@@ -105,6 +98,10 @@ workflows:
               branches:
                 only:
                   - vitepress
-      - deploy:
+      - s3:
+          requires:
+            - build
+
+      - gh:
           requires:
             - build
