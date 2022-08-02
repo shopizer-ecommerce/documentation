@@ -67,14 +67,24 @@ function getMainSidebar() {
       text: 'Configurations',
       collapsable: true,
       items: [
-        { text: 'Database configuration', link: '/configuration/database' }
+        { text: 'Database configuration', link: '/configuration/database' },
+        { text: 'Email configuration', link: '/configuration/emails' }
       ],
     },
     {
       text: 'Model',
       collapsable: true,
       items: [
-        { text: 'User', link: '/model/user' }
+        { text: 'User', link: '/model/user' },
+        { text: 'Merchant', link: '/model/merchant' },
+        { text: 'Country and Zones', link: '/model/country-zones' }
+      ],
+    },
+    {
+      text: 'Tools',
+      collapsable: true,
+      items: [
+        { text: 'Translation', link: '/tools/translation' }
       ],
     },
   ]

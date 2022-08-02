@@ -1,6 +1,10 @@
-# User administration
+---
+title: Shopizer Users Model
+---
 
-### Business rules
+# User model
+
+## Business rules
 
 
 |Role                                       |Description                                                  |
@@ -25,7 +29,9 @@
 - When login in a any other admin only users from same store are displayed in the list
 - User cannot delete himself, he has to rely on other admin
 
-#### Create / modify user page
+
+
+### Create / modify user page
 
 - Cannot assign group to superadmin
 - Self cannot edit it’s own groups
