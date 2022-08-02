@@ -59,7 +59,7 @@ jobs:
       #- run: rm ./documentation/service-worker.js
       #- run: rm ./documentation/index.html
       - run: rm -rf ./documentation/*
-      - run: cp -pr ./dist/* ./documentation
+      - run: cp -pr .vitepress/dist/* ./documentation
 
       - run:
           name: config email
