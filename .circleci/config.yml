@@ -16,7 +16,7 @@ jobs:
       - run: yarn docs:build
 
       - run: mv docs/.vitepress docs/vitepress
-      - run: cp -pr  docs/images docs/vitepress/dist
+      - run: cp -pr docs/images docs/vitepress/dist
       - run: ls -lR 
       - persist_to_workspace:
           root: docs
@@ -55,11 +55,11 @@ jobs:
       - run: |
           ls -lR
 
-      #- run: rm -rf ./documentation/static
-      #- run: rm ./documentation/service-worker.js
-      #- run: rm ./documentation/index.html
       - run: rm -rf ./documentation/*
       - run: cp -pr ./vitepress/dist/* ./documentation
+
+      - run: |
+          ls -lR
 
       - run:
           name: config email

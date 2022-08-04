@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Shopizer',
   description: 'Technical documentation for Shopizer e-commerce headless',
-  base:"/",
+  base:"/documentation/",
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: 'images/favicon.ico' }]
   ],
