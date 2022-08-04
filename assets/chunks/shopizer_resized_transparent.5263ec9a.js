@@ -1,1 +1,1 @@
-var e="/assets/shopizer_resized_transparent.4ee5c1ea.png";export{e as _};
+var e="/documentation/assets/shopizer_resized_transparent.4ee5c1ea.png";export{e as _};
