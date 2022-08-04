@@ -33,6 +33,10 @@ Properties (attributes) adds extension to the product core attributes by allowin
 
 ## Product variants (options)
 
+Variations of product definitions.
+
+- [Product variants](./product-variants)
+
 ## Product instances
 
 ## Product classification
