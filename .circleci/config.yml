@@ -100,6 +100,7 @@ workflows:
               branches:
                 only:
                   - vitepress
+                  - master
       - s3:
           requires:
             - build
