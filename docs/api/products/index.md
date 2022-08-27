@@ -39,6 +39,10 @@ Variations of product definitions.
 
 ## Product instances
 
+Product instances are product definitions with variants attached to it. A single product definition can have multiple product instances. Each product instance has its own sku.
+
+- [Product instaces](./product-instances)
+
 ## Product classification
 
 ## List products
