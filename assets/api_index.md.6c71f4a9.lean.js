@@ -1,1 +1,0 @@
-import{_ as e,c as r,o as a,a as o}from"./app.22d68e97.js";const f=JSON.parse('{"title":"Shopizer API Reference","description":"","frontmatter":{},"headers":[],"relativePath":"api/index.md"}'),t={name:"api/index.md"},s=o("",5),i=[s];function n(p,c,h,d,_,l){return a(),r("div",null,i)}var g=e(t,[["render",n]]);export{f as __pageData,g as default};
