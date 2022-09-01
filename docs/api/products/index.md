@@ -46,6 +46,10 @@ Product instances are product definitions with variants attached to it. A single
 
 ## Product classification
 
+Products are classified in Category.
+
+- [Product category](./product-category)
+
 ## List products
 
 ## Search products
