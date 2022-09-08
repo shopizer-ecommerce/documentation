@@ -52,6 +52,10 @@ Products are classified in Category.
 
 ## List products
 
+List products with pagination and filters for a specific Merchant Store and Language.
+
+- [Product listing](./product-listing)
+
 ## Search products
 
 
