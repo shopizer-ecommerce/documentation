@@ -58,7 +58,9 @@ List products with pagination and filters for a specific Merchant Store and Lang
 
 ## Search products
 
+Full Text search and Auto complete keywords using Search server such as Elastic Search and Open Search
 
+- [Product search](./product-search)
 
 
 ## Swagger documentations

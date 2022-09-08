@@ -1,9 +1,16 @@
-# Shopizer API Reference
+---
+title: Shopizer Shopping Cart REST api documentation
+---
 
-- [Products](./products/index.md)
-- [Shopping Cart](./shopping-cart/index.md)
+# Shopping Cart API Reference
 
-# Swagger documentations
+## Shopping Cart management
+
+
+
+
+
+## Swagger documentations
 
 All apis are described on Swaggerhub Shopizer repository
 
