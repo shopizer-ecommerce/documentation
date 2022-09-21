@@ -24,6 +24,11 @@ Product definition is product metadata that defines core non variables elements 
 - [Product definition](./product-definition)
 - [Product images](./product-images)
 
+## Product
+
+Product definition returns product summary usefull when working on a product management perspective. Product api returns complete object with composition rules and should be used when listing products or getting product details.
+
+- [Product](./product)
 
 ## Product properties (attributes)
 
