@@ -65,12 +65,7 @@ function getMainSidebar() {
           text: 'Products REST API',
           link: '/api/products/index.md',
           collapsable: true,
-        }, 
-        {
-          text: 'Inventory REST API',
-          link: '/api/inventory/index.md',
-          collapsable: true,
-        },        
+        },      
         {
           text: 'Shopping Cart REST API',
           link: '/api/shopping-cart/index.md',
