@@ -57,8 +57,18 @@ function getMainSidebar() {
 
       items: [
         {
+          text: 'Authentication API',
+          link: '/api/auth/index.md',
+          collapsable: true,
+        },        
+        {
           text: 'Products REST API',
           link: '/api/products/index.md',
+          collapsable: true,
+        }, 
+        {
+          text: 'Inventory REST API',
+          link: '/api/inventory/index.md',
           collapsable: true,
         },        
         {
