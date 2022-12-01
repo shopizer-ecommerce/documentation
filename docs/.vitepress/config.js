@@ -87,7 +87,8 @@ function getMainSidebar() {
       items: [
         { text: 'User', link: '/model/user' },
         { text: 'Merchant', link: '/model/merchant' },
-        { text: 'Country and Zones', link: '/model/country-zones' }
+        { text: 'Country and Zones', link: '/model/country-zones' },
+        { text: 'Product References', link: '/model/product-references' }
       ],
     },
     {
