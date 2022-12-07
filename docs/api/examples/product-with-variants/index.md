@@ -128,8 +128,8 @@ POST
 
 ```js
 {
-    "id": 10651,
-    "code": "cotton-shirts",
+    "id": 51,
+    "code": "headsets",
     "sortOrder": 0,
     "visible": true,
     "featured": false,
@@ -138,15 +138,24 @@ POST
     "parent": null,
     "descriptions": [
         {
-            "id": 0,
             "language": "en",
-            "name": "Cotton Shirts",
+            "name": "Headsets",
             "description": null,
-            "friendlyUrl": "cotton-shirts",
+            "friendlyUrl": "headsets",
             "keyWords": null,
             "highlights": null,
             "metaDescription": null,
-            "title": "Standard cotton t-shirts"
+            "title": "SimBeats Headsets"
+        },
+                {
+            "language": "fr",
+            "name": "Écouteurs",
+            "description": null,
+            "friendlyUrl": "ecouteurs",
+            "keyWords": null,
+            "highlights": null,
+            "metaDescription": null,
+            "title": "SimBeats Écouteurs"
         }
     ],
     "children": []
