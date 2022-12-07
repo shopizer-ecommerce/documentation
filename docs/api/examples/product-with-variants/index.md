@@ -250,7 +250,7 @@ POST
 
 **Description:**
 
-Edit product definition
+Edit product definition. This is usefull to update the details of a product.
 
 **Method:**
 
@@ -480,7 +480,7 @@ POST
       "language": "fr"
     }
   ],
-  "order": 0
+  "order": 5
 }
 ```
 
@@ -497,9 +497,9 @@ POST
     "code": "blue",
     "name": null,
     "defaultValue": false,
-    "sortOrder": 0,
+    "sortOrder": 5,
     "image": null,
-    "order": 0,
+    "order": 5,
     "price": null,
     "description": {
         "id": 4,
@@ -547,7 +547,7 @@ POST
       "language": "fr"
     }
   ],
-  "order": 0
+  "order": 10
 }
 ```
 
@@ -564,9 +564,9 @@ POST
     "code": "black",
     "name": null,
     "defaultValue": false,
-    "sortOrder": 0,
+    "sortOrder": 10,
     "image": null,
-    "order": 0,
+    "order": 10,
     "price": null,
     "description": {
         "id": 6,
