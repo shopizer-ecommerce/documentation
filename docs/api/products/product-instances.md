@@ -1,18 +1,18 @@
-# Product Instances
+# Product Variants
 
-A Product Instance is a product definition with a SKU and Variants.
+A Product Variant is a product definition with a SKU and Variants.
 
-A Product definition will become a Product Instance when variants are attached to it. An example for this is a simple Product instance (TShirt) will possibly have product instances such as TShirt Medium Black or TShirt Small White.
+A Product definition will become a Product variant when variants are attached to it. An example for this is a simple Product variant (TShirt) will possibly have product variant such as TShirt Medium Black or TShirt Small White.
 
-The product instance will be decorated with variants and will have a specific SKU attached to it.
+The product variant will be decorated with variants and will have a specific SKU attached to it.
 
 
 
-## Create Product Instance
+## Create Product variant
 
 **Description:**
 
-Creates a product instance
+Creates a product variant
 
 **Method:**
 
@@ -20,7 +20,7 @@ POST
 
 **Url:**
 
-{{url}}/api/v2/private/product/26100/instance
+{{url}}/api/v2/private/product/26100/variant
 
 
 **Body:**
@@ -51,7 +51,7 @@ POST
 
 
 
-## Update Product Instance
+## Update Product variant
 
 **Description:**
 
@@ -63,7 +63,7 @@ PUT
 
 **Url:**
 
-{{url}}/api/v2/private/product/26100/instance/150
+{{url}}/api/v2/private/product/26100/variant/150
 
 
 **Body:**
@@ -92,7 +92,7 @@ PUT
 
 
 
-## Check if Product instance exists
+## Check if Product variant exists
 
 **Description:**
 
@@ -104,7 +104,7 @@ GET
 
 **Url:**
 
-{{url}}/api/v2/private/product/26100/instance/A256TSW/unique
+{{url}}/api/v2/private/product/26100/variant/A256TSW/unique
 
 
 
@@ -122,7 +122,7 @@ GET
 
 
 
-## List product instances
+## List product variants
 
 **Description:**
 
@@ -134,7 +134,7 @@ GET
 
 **Url:**
 
-{{url}}/api/v2/private/product/26100/instances
+{{url}}/api/v2/private/product/26100/variants
 
 
 
@@ -227,7 +227,7 @@ GET
 
 
 
-## Get Product Instance
+## Get Product variant
 
 **Description:**
 
@@ -239,7 +239,7 @@ GET
 
 **Url:**
 
-{{url}}/api/v2/private/product/26100/instance/150
+{{url}}/api/v2/private/product/26100/variant/150
 
 
 
@@ -324,7 +324,7 @@ GET
 
 
 
-## Delete Product Instance
+## Delete Product variant
 
 **Description:**
 
@@ -336,7 +336,7 @@ DELETE
 
 **Url:**
 
-{{url}}/api/v2/private/product/26100/instance/150
+{{url}}/api/v2/private/product/26100/variant/150
 
 
 

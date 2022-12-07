@@ -1,7 +1,9 @@
 # Shopizer API Reference
 
+- [Authentification](./auth/index.md)
 - [Products](./products/index.md)
 - [Shopping Cart](./shopping-cart/index.md)
+- [Examples](./examples/index.md)
 
 # Swagger documentations
 

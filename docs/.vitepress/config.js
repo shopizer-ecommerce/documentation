@@ -67,8 +67,8 @@ function getMainSidebar() {
           collapsable: true,
         },      
         {
-          text: 'Shopping Cart REST API',
-          link: '/api/shopping-cart/index.md',
+          text: 'Product REST API examples',
+          link: '/api/examples/index.md',
           collapsable: true,
         }        
       ]

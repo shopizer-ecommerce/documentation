@@ -36,18 +36,18 @@ Properties (attributes) adds extension to the product core attributes by allowin
 
 - [Product custom properties](./product-properties)
 
-## Product variants (options)
+## Product variations (options)
 
 Variations of product definitions.
 
-- [Product variants](./product-variants)
+- [Product variations](./product-variants)
 
-## Product instances
+## Product variants
 
-Product instances are product definitions with variants attached to it. A single product definition can have multiple product instances. Each product instance has its own sku.
+Product variants are product definitions with variations attached to it. A single product definition can have multiple product variants. Each product variant has its own sku.
 
-- [Product instaces](./product-instances)
-- [Product instaces group](./product-instances-group)
+- [Product variants](./product-instances)
+- [Product variants group](./product-instances-group)
 
 ## Product classification
 
