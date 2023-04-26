@@ -11,16 +11,21 @@ footer: Apache Licensed | Copyright © 2019-present Shopizer
 
 ### News
 
-
-- A Vue Storefront Shop App is on the way
+- Tailwind CSS / Tailwing components demo on the way
 
 - We have a shop react app so you can test the software
 
 - Moving towards service based Headless commerce
 
-- We began decoupling our system to microservices as well as 
-
 - We taking on new projects every semester
+
+- Terraform automation scripts
+
+### Community
+
+Join Shopizer Community on Slack
+
+https://communityinviter.com/apps/shopizer/shopizer
 
 
 
