@@ -1,0 +1,48 @@
+/* Halo effect for the logo */
+.VPImage {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .VPImage::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(
+      circle,
+      rgba(59, 130, 246, 0.15) 0%,
+      rgba(59, 130, 246, 0.1) 40%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .VPImage::before {
+    opacity: 1;
+  }
+  
+  /* Alternative: Always visible subtle halo */
+  .VPImage::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(
+      circle,
+      rgba(59, 130, 246, 0.05) 0%,
+      rgba(59, 130, 246, 0.02) 50%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
