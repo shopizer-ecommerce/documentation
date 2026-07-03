@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(
+  defineConfig({
   title: "Shopizer 4.X documentation",
   description: "Shopizer 4.X documentation",
   themeConfig: {
@@ -25,6 +27,7 @@ export default defineConfig({
               { text: 'Deploy Shopizer on AWS EKS', link: '/guide/deploy-shopizer-aws' }
             ]
            },
+           { text: 'Model', link: '/guide/model' },
           
         ]
       },
@@ -40,4 +43,6 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/shopizer-ecommerce/shopizer' }
     ]
   }
-})
+  })
+)
+

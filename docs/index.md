@@ -4,26 +4,29 @@ layout: home
 hero:
   name: Shopizer 4.X
   text: documentation
-  tagline: Microservices and Java based commerce system
+  tagline: Microservices and Java based trandactional system
   image:
     src: /shopizer_resized_transparent.png
     alt: Shopizer
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/
+      link: /getting-started/
     - theme: alt
       text: View on GitHub
       link: https://github.com
 
 features:
-  - icon: ⚡️
-    title: Postgres Database
+  - icon: 🔥
+    title: Concept
     details: JSONB for flexible product attributes with Vector search
-  - icon: ⚡️
+    link: concept
+  - icon: 🛠️
     title: Microservices
     details: Helm chart driven microservices
-  - icon: 🛠️
-    title: Fully Customizable
-    details: Customize your site with Vue components and CSS variables
+    link: microservices
+  - icon: ⚡️
+    title: Deployment
+    details: Deploy on Kubernetes
+    link: deploy
 ---

@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Shopizer Architecture</title>
+  <desc id="desc">Architecture diagram showing Shopizer clients, Spring Boot services, shared common module, identity, data, optional embeddings, and deployment flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.48" stop-color="#eef8f6"/>
+      <stop offset="1" stop-color="#fff7ed"/>
+    </linearGradient>
+    <linearGradient id="clientGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5a4"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="serviceGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="dataGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ecfdf5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 1 1 L 11 6 L 1 11 Z" fill="#d97706"/>
+    </marker>
+    <style>
+      .title { font: 800 54px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; letter-spacing: 0; }
+      .subtitle { font: 500 22px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; letter-spacing: 0; }
+      .section { font: 800 18px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; text-transform: uppercase; letter-spacing: 1.4px; }
+      .cardTitle { font: 800 25px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; letter-spacing: 0; }
+      .cardTitleWhite { font: 800 25px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; letter-spacing: 0; }
+      .smallTitle { font: 800 19px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; letter-spacing: 0; }
+      .text { font: 500 17px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; letter-spacing: 0; }
+      .textWhite { font: 500 17px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e0f2fe; letter-spacing: 0; }
+      .tiny { font: 700 14px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; letter-spacing: 0; }
+      .pillText { font: 800 14px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; letter-spacing: 0; }
+      .lineBlue { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowBlue); }
+      .lineTeal { fill: none; stroke: #0f766e; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowTeal); }
+      .lineAmber { fill: none; stroke: #d97706; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowAmber); }
+      .dash { stroke-dasharray: 10 12; }
+      .panel { fill: rgba(255,255,255,0.72); stroke: #d8e4ed; stroke-width: 1.5; }
+      .card { fill: url(#serviceGrad); stroke: #cbd5e1; stroke-width: 1.5; }
+      .dataCard { fill: url(#dataGrad); stroke: #bbf7d0; stroke-width: 1.5; }
+      .keyCard { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1.5; }
+      .deployCard { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; }
+      .iconCircle { fill: #ecfeff; stroke: #99f6e4; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1420" cy="120" r="170" fill="#fef3c7" opacity="0.55"/>
+  <circle cx="135" cy="840" r="210" fill="#dbeafe" opacity="0.6"/>
+
+  <text x="90" y="92" class="title">Shopizer Architecture</text>
+  <text x="92" y="132" class="subtitle">Modular commerce services with OAuth2 security, PostgreSQL persistence, pgvector search, and a React admin experience.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="170" width="1456" height="188" rx="28" class="panel"/>
+  </g>
+  <text x="104" y="211" class="section">Experience layer</text>
+
+  <g filter="url(#softShadow)">
+    <rect x="108" y="238" width="385" height="86" rx="18" fill="url(#clientGrad)"/>
+    <circle cx="148" cy="281" r="23" fill="#ffffff" opacity="0.18"/>
+    <path d="M138 281 h20 M148 271 v20" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <text x="188" y="272" class="cardTitleWhite">React Admin</text>
+    <text x="188" y="300" class="textWhite">Refine, Ant Design, Keycloak login</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="552" y="238" width="385" height="86" rx="18" fill="#0f766e"/>
+    <circle cx="592" cy="281" r="23" fill="#ffffff" opacity="0.18"/>
+    <path d="M580 286 c14 -25 27 -25 41 0" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="632" y="272" class="cardTitleWhite">Storefronts</text>
+    <text x="632" y="300" class="textWhite">Public catalog, cart, checkout clients</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="996" y="238" width="385" height="86" rx="18" fill="#1d4ed8"/>
+    <circle cx="1036" cy="281" r="23" fill="#ffffff" opacity="0.18"/>
+    <path d="M1027 274 h18 l9 8 -9 8 h-18 z" stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linejoin="round"/>
+    <text x="1076" y="272" class="cardTitleWhite">API Consumers</text>
+    <text x="1076" y="300" class="textWhite">Back-office tools and integrations</text>
+  </g>
+
+  <path d="M300 324 C300 376 300 393 300 420" class="lineBlue"/>
+  <path d="M744 324 C744 376 744 393 744 420" class="lineTeal"/>
+  <path d="M1188 324 C1188 376 1188 393 1188 420" class="lineBlue"/>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="398" width="1456" height="304" rx="28" class="panel"/>
+  </g>
+  <text x="104" y="440" class="section">Spring Boot service layer</text>
+
+  <rect x="112" y="468" width="264" height="150" rx="18" class="card"/>
+  <circle cx="145" cy="502" r="20" class="iconCircle"/>
+  <path d="M136 502 h18 M145 493 v18" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="178" y="502" class="smallTitle">Shop Service</text>
+  <text x="178" y="528" class="tiny">/shop</text>
+  <text x="136" y="568" class="text">Products, categories</text>
+  <text x="136" y="594" class="text">inventory, media, search</text>
+
+  <rect x="404" y="468" width="264" height="150" rx="18" class="card"/>
+  <circle cx="437" cy="502" r="20" class="iconCircle"/>
+  <path d="M428 498 h18 l6 8 h-29 z" stroke="#2563eb" stroke-width="3.2" fill="none" stroke-linejoin="round"/>
+  <text x="470" y="502" class="smallTitle">Orders Service</text>
+  <text x="470" y="528" class="tiny">/orders</text>
+  <text x="428" y="568" class="text">Cart and order APIs</text>
+  <text x="428" y="594" class="text">checkout workflow</text>
+
+  <rect x="696" y="468" width="264" height="150" rx="18" class="card"/>
+  <circle cx="729" cy="502" r="20" class="iconCircle"/>
+  <path d="M729 491 a8 8 0 1 1 0 16 a8 8 0 0 1 0 -16 M716 516 c6 -8 20 -8 26 0" stroke="#ea580c" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <text x="762" y="502" class="smallTitle">Users Service</text>
+  <text x="762" y="528" class="tiny">/users</text>
+  <text x="720" y="568" class="text">Users, profile data</text>
+  <text x="720" y="594" class="text">merchant account access</text>
+
+  <rect x="988" y="468" width="264" height="150" rx="18" class="card"/>
+  <circle cx="1021" cy="502" r="20" class="iconCircle"/>
+  <path d="M1011 509 v-16 h20 v16 M1016 509 v-8 h10 v8" stroke="#0f766e" stroke-width="3.2" fill="none" stroke-linejoin="round"/>
+  <text x="1054" y="502" class="smallTitle">Merchants</text>
+  <text x="1054" y="528" class="tiny">/merchants</text>
+  <text x="1012" y="568" class="text">Stores, organization</text>
+  <text x="1012" y="594" class="text">context and hierarchy</text>
+
+  <rect x="1280" y="468" width="208" height="150" rx="18" class="card"/>
+  <circle cx="1313" cy="502" r="20" class="iconCircle"/>
+  <path d="M1303 498 h20 M1303 506 h20 M1313 488 v28" stroke="#2563eb" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <text x="1346" y="502" class="smallTitle">References</text>
+  <text x="1346" y="528" class="tiny">/references</text>
+  <text x="1304" y="568" class="text">Countries, zones</text>
+  <text x="1304" y="594" class="text">languages</text>
+
+  <rect x="368" y="644" width="864" height="40" rx="20" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.5"/>
+  <text x="548" y="670" class="pillText">Common module: shared DTOs, security helpers, JSON config, pricing, exceptions</text>
+
+  <path d="M244 618 C244 648 326 664 368 664" class="lineTeal dash"/>
+  <path d="M536 618 C536 642 536 644 536 644" class="lineTeal dash"/>
+  <path d="M828 618 C828 642 828 644 828 644" class="lineTeal dash"/>
+  <path d="M1120 618 C1120 642 1120 644 1120 644" class="lineTeal dash"/>
+  <path d="M1384 618 C1384 648 1274 664 1232 664" class="lineTeal dash"/>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="742" width="908" height="184" rx="28" class="panel"/>
+  </g>
+  <text x="104" y="784" class="section">Data and platform services</text>
+
+  <rect x="112" y="812" width="252" height="82" rx="18" class="dataCard"/>
+  <text x="140" y="846" class="smallTitle">PostgreSQL + pgvector</text>
+  <text x="140" y="874" class="text">Catalog, orders, users, embeddings</text>
+
+  <rect x="392" y="812" width="164" height="82" rx="18" class="dataCard"/>
+  <text x="420" y="846" class="smallTitle">Redis</text>
+  <text x="420" y="874" class="text">Context cache</text>
+
+  <rect x="584" y="812" width="190" height="82" rx="18" class="dataCard"/>
+  <text x="612" y="846" class="smallTitle">Image Storage</text>
+  <text x="612" y="874" class="text">Product media</text>
+
+  <rect x="802" y="812" width="138" height="82" rx="18" class="keyCard"/>
+  <text x="830" y="846" class="smallTitle">OpenAI</text>
+  <text x="830" y="874" class="text">Embeddings</text>
+
+  <path d="M244 702 C244 754 244 777 244 812" class="lineTeal"/>
+  <path d="M828 702 C826 748 820 776 802 821" class="lineAmber dash"/>
+  <path d="M1120 702 C1000 738 730 774 556 831" class="lineTeal dash"/>
+  <path d="M244 702 C330 742 535 775 610 812" class="lineTeal dash"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1016" y="742" width="512" height="184" rx="28" class="panel"/>
+  </g>
+  <text x="1048" y="784" class="section">Identity and delivery</text>
+
+  <rect x="1056" y="812" width="194" height="82" rx="18" class="keyCard"/>
+  <text x="1084" y="846" class="smallTitle">Keycloak</text>
+  <text x="1084" y="874" class="text">OIDC, roles, org claims</text>
+
+  <rect x="1278" y="812" width="210" height="82" rx="18" class="deployCard"/>
+  <text x="1306" y="846" class="smallTitle">Kubernetes / Kind</text>
+  <text x="1306" y="874" class="text">Maven images, Helm charts</text>
+
+  <path d="M1153 812 C1150 746 1110 717 960 664" class="lineAmber dash"/>
+  <path d="M1383 812 C1384 748 1384 701 1384 618" class="lineBlue dash"/>
+
+  <rect x="90" y="946" width="1420" height="1.5" fill="#cbd5e1"/>
+  <text x="92" y="976" class="tiny">API contracts are REST over OAuth2 resource servers. Each backend module is independently deployable while sharing the common library and platform services.</text>
+</svg>

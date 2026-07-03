@@ -16,22 +16,26 @@ Follow these steps to configure Keycloak after installation:
 - Enable the following flows:
   - ✅ Standard Flow  
   - ✅ Direct Access Grants  
-  - ✅ Implicit Flow  
+  - ✅ Implicit Flow
+  - Clien authentication enabled
+  - **Redirect URIs**: Set to `*`  
+  - **Web Origins**: Set to `*`  
 
-## 3. Add a Client Scope (`admin`)
-- Go to **Client Scopes → Create**
-- Name it `admin` ** if it already exist skip to the next step **
-- Save and assign it to the client `shopizer`
+## 3.Add Client Scopes (from left menu)
 
-## 4. Create Client Roles
+- Create client scope admin
+- Create client scope read
+- Create client scope wtite
+
+## 4. Associate Client Scope to shopizer client
+- Go to **Client Scopes (in shopizer client upper menu) → Create**
+- Assign assig client scopes created in Step 3n it to the client `shopizer`
+
+## 5. Create Client Roles
 - Go to **Clients → shopizer → Roles**
 - Add the following roles:
   - `admin`
-  - `superadmin`
-
-## 5. Update Client Settings
-- **Valid Redirect URIs**: Set to `*`  
-- **Web Origins**: Set to `*`  
+  - `superadmin` 
 
 ## 6. Create an Admin User
 - Go to **Users → Add User**
@@ -45,8 +49,12 @@ Follow these steps to configure Keycloak after installation:
 - Toggle **Email verified** to `ON`
 
 ### Assign Roles
-- Go to **Users → admin@shopizer.com → Role Mappings**
-- Select **Client Roles → shopizer**
+- Go to **Users new user admin@shopizer.com
+- email verified enabled
+- firstname admin
+- last name admin
+- Go to **Role Mappings**
+- Select **Assign Roles**
 - Add roles: `admin`, `superadmin`
 
 ## 7. Update Local DNS
@@ -64,7 +72,7 @@ Add the following entry
 
 To get the client secret for your client (`shopizer`):
 
-1. Log in to the Keycloak Admin Console.
+1. Log in to the Keycloak Admin Console `http://keycloak/keycloak`
 2. Select your realm (`master`).
 3. Navigate to **Clients → shopizer**.
 4. Click on the **Credentials** tab.
