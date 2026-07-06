@@ -1,0 +1,109 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1.0
+  slack: circleci/slack@3.4.2
+  aws-cli: circleci/aws-cli@2.0.3
+
+jobs:
+  #build source
+  build:
+    docker:
+      - image: cimg/node:20.11
+    steps:
+      - checkout
+      - run: npm ci
+      - run: npm run docs:build
+      - run: ls -l docs/.vitepress/dist
+      - persist_to_workspace:
+          root: docs/.vitepress
+          paths:
+            - dist
+
+  s3:
+    working_directory: ~/project
+    executor: aws-cli/default
+    steps:
+      - attach_workspace:
+          at: .
+       # start proprietary DB using private Docker image
+       # with credentials stored in the UI
+      - run: |
+          ls -lR
+      - aws-cli/setup:
+          profile-name: circleci
+      #TODO bucket in environment
+      - run: aws s3 sync ./dist s3://shopizer-documentation/ --region ca-central-1 --delete --profile circleci
+      - slack/status:
+          fail_only: false
+          webhook: $SLACK_WEBHOOK
+
+  #destination
+  gh:
+    docker:
+      - image: cimg/node:20.11
+    steps:
+      - attach_workspace:
+         at: .
+      - run:
+          name: Get gh-pages
+          command: |
+            git clone -b gh-pages https://github.com/shopizer-ecommerce/documentation.git
+      - run: |
+          ls -lR
+
+      - run: rm -rf ./documentation/*
+      - run: cp -pr ./dist/* ./documentation
+
+      - run: |
+          ls -lR
+
+      - run:
+          name: config email
+          command: git config --global user.email $EMAIL
+          working_directory: documentation
+
+      - run:
+          name: config user name
+          command: git config --global user.name $GIT_AUTHOR_NAME
+          working_directory: documentation
+
+      - run:
+          name: add files
+          command: git add .
+          working_directory: documentation
+
+      - run:
+          name: commit
+          command: git commit -m "[skip ci] latest"
+          working_directory: documentation
+
+      - run:
+          name: push
+          command: git push https://$GIT_TOKEN@github.com/shopizer-ecommerce/documentation.git gh-pages
+          working_directory: documentation
+
+      #- run: |
+      #     (git config --global user.email $EMAIL && git config --global user.name $GIT_COMMITTER_NAME && git add . && git commit -m "[skip ci] latest" && git push https://$GIT_COMMITTER_NAME:$GIT_TOKEN@github.com/shopizer-ecommerce/documentation.git gh-pages)
+
+        
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build:
+          filters:
+              branches:
+                only:
+                  - 4.0
+      - s3:
+          requires:
+            - build
+          filters:
+              branches:
+                only:
+                  - 4.0
+
+      # gh-pages publishing is intentionally not part of the 4.0 deployment.
+      # The generated VitePress dist is deployed to the existing S3 bucket above.

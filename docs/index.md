@@ -6,7 +6,7 @@ hero:
   text: documentation
   tagline: Microservices and Java based trandactional system
   image:
-    src: /shopizer_resized_transparent.png
+    src: /shopizer_vertical_qr.png
     alt: Shopizer
   actions:
     - theme: brand
@@ -22,9 +22,9 @@ features:
     details: JSONB for flexible product attributes with Vector search
     link: concept
   - icon: 🛠️
-    title: Microservices
-    details: Helm chart driven microservices
-    link: microservices
+    title: Getting Started
+    details: Start deploying locally
+    link: getting-started
   - icon: ⚡️
     title: Deployment
     details: Deploy on Kubernetes

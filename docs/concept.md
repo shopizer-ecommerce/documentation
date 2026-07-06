@@ -1,6 +1,6 @@
 # Shopizer Architecture
 
-Shopizer is organized as a modular commerce platform with a React-based administration UI, independently deployable Spring Boot services, shared platform infrastructure, and OAuth2 security. Keycloak is used for the administration application.
+Shopizer is organized as a modular commerce / transactional platform with a React-based administration UI, independently deployable Spring Boot services, shared platform infrastructure, and OAuth2 security. Keycloak is used for the administration application.
 
 The system is designed around clear service boundaries: catalog and product management live in the Shop service, checkout workflows live in the Orders service, user and merchant administration are handled by their own services, and reference data is exposed separately for countries, zones, and languages. Shared concerns such as DTOs, security helpers, pricing utilities, JSON configuration, and common exceptions are centralized in the `common` module.
 
